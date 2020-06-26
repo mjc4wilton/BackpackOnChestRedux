@@ -6,7 +6,7 @@ import subprocess
 
 ######## GLOBALS #########
 MAINPREFIX = "z"
-PREFIX = "proj_templ_"
+PREFIX = "BackpackOnChestRedux_"
 ##########################
 
 def mod_time(path):
@@ -32,7 +32,7 @@ def check_for_obsolete_pbos(addonspath, file):
 def main():
     print("""
   ####################
-  # PROJ_TEMPL3 Debug Build #
+  # BackpackOnChestRedux Debug Build #
   ####################
 """)
 

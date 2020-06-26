@@ -57,7 +57,7 @@ if sys.platform == "win32":
     import winreg
 
 ######## GLOBALS #########
-project = "@proj_templ"
+project = "@BackpackOnChestRedux"
 project_version = "3.0.0"
 arma3tools_path = ""
 work_drive = ""
@@ -66,11 +66,11 @@ make_root = ""
 release_dir = ""
 module_root_parent = ""
 optionals_root = ""
-key_name = "proj_templ"
+key_name = "BackpackOnChestRedux"
 key = ""
 dssignfile = ""
-prefix = "proj_templ"
-pbo_name_prefix = "proj_templ_"
+prefix = "BackpackOnChestRedux"
+pbo_name_prefix = "BackpackOnChestRedux_"
 signature_blacklist = []
 importantFiles = ["mod.cpp", "README.md", "AUTHORS.txt", "LICENSE", "logo_proj_templ_ca.paa"]
 versionFiles = ["README.md", "mod.cpp"]

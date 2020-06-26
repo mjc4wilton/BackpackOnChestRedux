@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 
 #######################
-#  PROJ_TEMPL Setup Script  #
+#  BackpackOnChestRedux Setup Script  #
 #######################
 
 import os
@@ -13,26 +13,26 @@ import winreg
 
 ######## GLOBALS #########
 MAINDIR = "z"
-PROJECTDIR = "proj_templ"
+PROJECTDIR = "BackpackOnChestRedux"
 ##########################
 
 def main():
     FULLDIR = "{}\\{}".format(MAINDIR,PROJECTDIR)
     print("""
   ######################################
-  # PROJ_TEMPL Development Environment Setup #
+  # BackpackOnChestRedux Development Environment Setup #
   ######################################
 
-  This script will create your PROJ_TEMPL dev environment for you.
+  This script will create your BackpackOnChestRedux dev environment for you.
 
   Before you run this, you should already have:
     - A properly setup ACE3 Development Environment
 
   If you have not done those things yet, please abort this script in the next step and do so first.
 
-  This script will create two hard links on your system, both pointing to your PROJ_TEMPL project folder:
-    [Arma 3 installation directory]\\{} => PROJ_TEMPL project folder
-    P:\\{}                              => PROJ_TEMPL project folder
+  This script will create two hard links on your system, both pointing to your BackpackOnChestRedux project folder:
+    [Arma 3 installation directory]\\{} => BackpackOnChestRedux project folder
+    P:\\{}                              => BackpackOnChestRedux project folder
     """.format(FULLDIR,FULLDIR))
     print("\n")
 
