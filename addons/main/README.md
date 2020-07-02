@@ -1,4 +1,4 @@
-BackpackOnChestRedux_main
+wilton_bocr_main
 ========
 
 Backbone of other components, defining most of the commonly used macros.

@@ -1,6 +1,6 @@
 class CfgFactionClasses {
     class NO_CATEGORY;
-    class BackpackOnChestRedux: NO_CATEGORY {
+    class wilton_bocr: NO_CATEGORY {
         displayName = "BackpackOnChestRedux";
         priority = 2;
         side = 7;
@@ -8,7 +8,7 @@ class CfgFactionClasses {
 };
 
 class CfgVehicleClasses {
-    class BackpackOnChestRedux_Vehicles {
+    class wilton_bocr_Vehicles {
         displayName = "BackpackOnChestRedux Vehicles";
     };
 };

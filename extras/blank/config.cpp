@@ -6,7 +6,7 @@ class CfgPatches {
         units[] = {};
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
-        requiredAddons[] = {"BackpackOnChestRedux_main"};
+        requiredAddons[] = {"wilton_bocr_main"};
         author = "";
         authors[] = {""};
         VERSION_CONFIG;
