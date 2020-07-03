@@ -1,31 +1,30 @@
 /*
  * Author: DerZade, mjc4wilton
- * Triggered by the onBack-action. Handles all the stuff.
+ * Triggerd by Killed-Eventhandler
  *
  * Arguments:
- * 0: Unit <OBJECT>
+ * 0: unit <OBJECT>
  *
  * Return Value:
  * Nothing
  *
  * Example:
- * [player] call bocr_main_fnc_actionOnBack;
+ * _this call bocr_main_fnc_EHKilled;
  *
  * Public: No
  */
-params ["_player"];
+params ["_unit"];
 
-private _chestpack = [_player] call FUNC(chestpack);
-private _chestpackItems =  [_player,false] call FUNC(chestpackItems);
-private _chestpackVariables = [_player] call FUNC(chestpackVariables);
+private _chestpack = [_unit] call FUNC(chestpack);
+private _chestpackItems =  [_unit] call FUNC(chestpackItems);
+private _chestpackVariables = [_unit] call FUNC(chestpackVariables);
 
-//make sure the player has a chestpack and no backpack
-if ((_chestpack isEqualTo "") or !(backpack _player isEqualTo "")) exitWith {};
+private _holder = createVehicle ["WeaponHolderSimulated", (getPos _unit), [], 0, "CAN_COLLIDE"];
 
 //add pack
-_player addBackpackGlobal _chestpack;
-clearAllItemsFromBackpack _player;
-private _backpack = backpackContainer _player;
+_holder addBackpackCargoGlobal [_chestpack, 1];
+private _backpack = firstBackpack _holder;
+clearAllItemsFromBackpack _backpack;
 
 //add items
 {
@@ -47,4 +46,5 @@ private _backpack = backpackContainer _player;
      _backpack setVariable [(_x select 0), (_x select 1), true];
 } forEach _chestpackVariables;
 
-[_player] call FUNC(removeChestpack);
+//remove the backpack from the dead unit
+[_unit] call FUNC(removeChestpack);

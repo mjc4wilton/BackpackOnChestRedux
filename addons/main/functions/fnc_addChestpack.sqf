@@ -5,6 +5,8 @@
  * Arguments:
  * 0: Unit  <OBJECT>
  * 1: Backpack Classname <STRING>
+ * 2: Backpack Items <ARRAY>
+ * 3: Backpack Variables <ARRAY>
  *
  * Return Value:
  * Nothing
@@ -14,25 +16,25 @@
  *
  * Public: No
  */
-params ["_unit","_chestpackClass"];
+params ["_unit","_chestpackClass","_backpackItemsStorable","_backpackVariablesStorable"];
 
 //add HandleDisconnect-EH on server if not done yet
-if !(missionNamespace getVariable ["BackpackOnChestRedux_HDCEHadded",false]) then {
-     [[[],{addMissionEventHandler ["HandleDisconnect",BackpackOnChestRedux_fnc_EHHandleDisconnect];}],"BIS_fnc_call",false] call BIS_fnc_MP;
-     BackpackOnChestRedux_HDCEHadded = true;
-     publicVariable "BackpackOnChestRedux_HDCEHadded";
+if !(GETMVAR(GVAR(HDCEHadded), false)) then {
+     [[[],{addMissionEventHandler ["HandleDisconnect",FUNC(EHHandleDisconnect)];}],"BIS_fnc_call",false] call BIS_fnc_MP;
+     GVAR(HDCEHadded) = true;
+     publicVariable QGVAR(HDCEHadded);
 };
 
 //delete existing chestpack, if there is one
-if ([_unit] call zade_boc_fnc_chestpack != "") then {
-     [_unit] call zade_boc_fnc_removeChestpack;
+if ([_unit] call FUNC(chestpack) != "") then {
+     [_unit] call FUNC(removeChestpack);
 };
 
 //add EHs
-private _getInID = _unit addEventHandler ["GetInMan",zade_boc_fnc_EHGetIn];
-private _getOutID = _unit addEventHandler ["GetOutMan",zade_boc_fnc_EHGetOut];
-private _animID = _unit addEventHandler ["AnimDone",zade_boc_fnc_EHAnimDone];
-private _killedID = _unit addEventHandler ["Killed",zade_boc_fnc_EHKilled];
+private _getInID = _unit addEventHandler ["GetInMan",FUNC(EHGetIn)];
+private _getOutID = _unit addEventHandler ["GetOutMan",FUNC(EHGetOut)];
+private _animID = _unit addEventHandler ["AnimDone",FUNC(EHAnimDone)];
+private _killedID = _unit addEventHandler ["Killed",FUNC(EHKilled)];
 
 //create chestpack itself
 private _chestpack = createSimpleObject [_chestpackClass, getPos _unit];
@@ -40,11 +42,11 @@ private _chestpack = createSimpleObject [_chestpackClass, getPos _unit];
 [_unit, "forceWalk", "BackpackOnChest", true] call ace_common_fnc_statusEffect_set;
 
 //set variable
-_unit setVariable ["zade_boc_chestpack",[[_chestpackClass,_chestpack],[_getInID,_getOutID,_animID,_killedID],[],[]],true];
+SETPVAR(_unit, GVAR(chestpack), [[_chestpackClass,_chestpack],[_getInID,_getOutID,_animID,_killedID],_backpackItemsStorable,_backpackVariablesStorable]);
 
 //execute vehicle shit
 if !(vehicle _unit isEqualTo _unit) then {
-	[_unit, "", vehicle _unit] call zade_boc_fnc_EHGetIn;
+	[_unit, "", vehicle _unit] call FUNC(EHGetIn);
 } else {
-	[_unit, "", objNull] call zade_boc_fnc_EHGetOut;
+	[_unit, "", objNull] call FUNC(EHGetOut);
 };
