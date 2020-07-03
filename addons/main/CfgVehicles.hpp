@@ -7,28 +7,28 @@ class CfgVehicles
           {
                class ACE_Equipment
                {
-                    class BackpackOnChestRedux
+                    class Wilton_BOCR_OnChest
                     {
-                         displayName = $STR_BackpackOnChestRedux_OnChest;
+                         displayName = CSTRING(onChest);
                          condition = "";
                          exceptions[] = {"isNotInside"};
-                         statement = "[_player] call zade_boc_fnc_actionOnChest";
+                         statement = "[_player] call FUNC(actionOnChest)";
                          showDisabled = 0;
                          priority = 2.5;
                          icon = "\zade_boc\data\actions\onchest_ca.paa";
                     };
-                    class zade_boc_onBack : zade_boc_onChest
+                    class Wilton_BOCR_OnBack : Wilton_BOCR_OnChest
                     {
-                         displayName = $STR_BackpackOnChestRedux_OnBack;
-                         condition = "!(missionNamespace getVariable ['zade_boc_disabled',false]) && (backpack _player isEqualTo '') && !([_player] call zade_boc_fnc_chestpack isEqualTo '')";
-                         statement = "[_player] call zade_boc_fnc_actionOnBack";
+                         displayName = CSTRING(onBack);
+                         condition = "!(missionNamespace getVariable ['wilton_bocr_disabled',false]) && (backpack _player isEqualTo '') && !([_player] call wilton_bocr_fnc_chestpack isEqualTo '')";
+                         statement = "[_player] call FUNC(actionOnBack)";
                          icon = "\zade_boc\data\actions\onback_ca.paa";
                     };
-                    class zade_boc_swap : zade_boc_onChest
+                    class Wilton_BOCR_Swap : Wilton_BOCR_OnChest
                     {
-                         displayName = $STR_BackpackOnChestRedux_swap;
-                         condition = "!(missionNamespace getVariable ['zade_boc_disabled',false]) && !(backpack _player isEqualTo '') && !([_player] call zade_boc_fnc_chestpack isEqualTo '')";
-                         statement = "[_player] call zade_boc_fnc_actionSwap";
+                         displayName = CSTRING(swap);
+                         condition = "!(missionNamespace getVariable ['wilton_bocr_disabled',false]) && !(backpack _player isEqualTo '') && !([_player] call wilton_bocr_fnc_chestpack isEqualTo '')";
+                         statement = "[_player] call FUNC(actionSwap)";
                          icon = "\zade_boc\data\actions\swap_ca.paa";
                     };
                };

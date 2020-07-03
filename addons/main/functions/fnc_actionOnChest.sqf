@@ -9,7 +9,7 @@
  * Nothing
  *
  * Example:
- * [player] call BackpackOnChestRedux_fnc_actionOnChest;
+ * [player] call wilton_bocr_fnc_actionOnChest;
  *
  * Public: No
  */
