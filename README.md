@@ -3,23 +3,20 @@
 </p>
 
 <p align="center">
-    <a href="https://github.com/acemod/arma-project-template/releases/latest">
-        <img src="https://img.shields.io/badge/Version-1.0.0-blue.svg?style=flat-square" alt="ACE Project Template Version">
+    <a href="https://github.com/mjc4wilton/BackpackOnChestRedux/releases/latest">
+        <img src="https://img.shields.io/github/v/release/mjc4wilton/BackpackOnChestRedux?style=flat-square" alt="BackpackOnChestRedux Version">
     </a>
-    <a href="https://github.com/acemod/arma-project-template/issues">
-        <img src="https://img.shields.io/github/issues-raw/acemod/arma-project-template.svg?style=flat-square&label=Issues" alt="ACE Project Template Issues">
+    <a href="https://github.com/mjc4wilton/BackpackOnChestRedux/issues">
+        <img src="https://img.shields.io/github/issues-raw/acemod/arma-project-template.svg?style=flat-square&label=Issues" alt="BackpackOnChestRedux Issues">
     </a>
-    <a href="https://github.com/acemod/arma-project-template/releases">
-        <img src="https://img.shields.io/github/downloads/acemod/arma-project-template/total.svg?style=flat-square&label=Downloads" alt="ACE Project Template Downloads">
+    <a href="https://github.com/mjc4wilton/BackpackOnChestRedux/releases">
+        <img src="https://img.shields.io/github/downloads/acemod/arma-project-template/total.svg?style=flat-square&label=Downloads" alt="BackpackOnChestRedux Downloads">
     </a>
-    <a href="https://github.com/acemod/arma-project-template/blob/master/LICENSE">
+    <a href="https://github.com/mjc4wilton/BackpackOnChestRedux/blob/master/LICENSE">
         <img src="https://img.shields.io/badge/License-MIT-red.svg?style=flat-square" alt="ACE Project Template License">
     </a>
-    <a href="https://slackin.ace3mod.com/">
-        <img src="https://slackin.ace3mod.com/badge.svg?style=flat-square&label=Slack" alt="ACE3 Slack">
-    </a>
-    <a href="https://travis-ci.org/acemod/arma-project-template">
-        <img src="https://img.shields.io/travis/acemod/arma-project-template.svg?style=flat-square&label=Build" alt="ACE Project Template Build Status">
+    <a href="https://travis-ci.org/mjc4wilton/BackpackOnChestRedux">
+        <img src="https://img.shields.io/travis/mjc4wilton/BackpackOnChestRedux.svg?style=flat-square&label=Build" alt="BackpackOnChestRedux Build Status">
     </a>
 </p>
 

@@ -10,7 +10,7 @@ class CfgVehicles
                     class BOCR_OnChest
                     {
                          displayName = CSTRING(onChest);
-                         condition = QUOTE(!(GETMVAR(bocr_disabled, false) && !(backpack _player isEqualTo '') && ([_player] call FUNC(chestpack) isEqualTo ''));
+                         condition = QUOTE(!(GETMVAR(bocr_disabled, false)) && !(backpack _player isEqualTo '') && ([_player] call FUNC(chestpack) isEqualTo ''));
                          exceptions[] = {"isNotInside"};
                          statement = QUOTE([_player] call FUNC(actionOnChest));
                          showDisabled = 0;

@@ -74,7 +74,7 @@ private _backpackVariablesStorable = [];
      private _muzzle = (_x select 1);
      private _flashlight = (_x select 2);
      private _optics = (_x select 3);
-     private _primaryMuzzleMagazine	= (_x select 4);
+     private _primaryMuzzleMagazine = (_x select 4);
      private _secondaryMuzzleMagazine = (_x select 5);
      private _bipod = (_x select 6);
 
