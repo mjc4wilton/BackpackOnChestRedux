@@ -7,7 +7,7 @@
         <img src="https://img.shields.io/github/v/release/mjc4wilton/BackpackOnChestRedux?style=flat-square" alt="BackpackOnChestRedux Version">
     </a>
     <a href="https://github.com/mjc4wilton/BackpackOnChestRedux/issues">
-        <img src="https://img.shields.io/github/issues-raw/acemod/arma-project-template.svg?style=flat-square&label=Issues" alt="BackpackOnChestRedux Issues">
+        <img src="https://img.shields.io/github/issues-raw/mjc4wilton/BackpackOnChestRedux.svg?style=flat-square&label=Issues" alt="BackpackOnChestRedux Issues">
     </a>
     <a href="https://github.com/mjc4wilton/BackpackOnChestRedux/releases">
         <img src="https://img.shields.io/github/downloads/acemod/arma-project-template/total.svg?style=flat-square&label=Downloads" alt="BackpackOnChestRedux Downloads">
