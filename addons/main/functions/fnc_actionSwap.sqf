@@ -16,10 +16,10 @@
 params ["_player"];
 
 private _backpack = backpack _player;
-private _backpackItemsRaw 		 	= backpackItems _player;
-private _backpackItemsStorable   	= [];
-private _backpackVariablesRaw      	= allVariables _backpack;
-private _backpackVariablesStorable 	= [];
+private _backpackItemsRaw = backpackItems _player;
+private _backpackItemsStorable = [];
+private _backpackVariablesRaw = allVariables _backpack;
+private _backpackVariablesStorable = [];
 
 private _chestpack = [_player] call FUNC(chestpack);
 private _chestpackItems =  [_player,false] call FUNC(chestpackItems);
@@ -70,13 +70,13 @@ if ((_backpack isEqualTo "") or ([_player] call FUNC(chestpack)) isEqualTo "") e
      _backpackItemsRaw deleteAt (_backpackItemsRaw find (_x select 0));
 
      //Handle individual items
-     private _weapon 					= (_x select 0);
-     private _muzzle 					= (_x select 1);
-     private _flashlight 				= (_x select 2);
-     private _optics 					= (_x select 3);
-     private _primaryMuzzleMagazine 	= (_x select 4);
-     private _secondaryMuzzleMagazine 	= (_x select 5);
-     private _bipod 					= (_x select 6);
+     private _weapon = (_x select 0);
+     private _muzzle = (_x select 1);
+     private _flashlight = (_x select 2);
+     private _optics = (_x select 3);
+     private _primaryMuzzleMagazine	= (_x select 4);
+     private _secondaryMuzzleMagazine = (_x select 5);
+     private _bipod = (_x select 6);
 
      _backpackItemsStorable pushBack [2, _weapon, _muzzle, _flashlight, _optics, _primaryMuzzleMagazine, _secondaryMuzzleMagazine, _bipod];
 
@@ -106,7 +106,7 @@ private _backpackNew = backpackContainer _player;
             _backpackNew addMagazineAmmoCargo [(_x select 1), (_x select 3), (_x select 2)];
         };
         case (2): {
-            _backpackNew addWeaponWithAttachmentsCargoGlobal [[(_x select 1)), (_x select 2), (_x select 3), (_x select 4), (_x select 5), (_x select 6), (_x select 7)], 1];
+            _backpackNew addWeaponWithAttachmentsCargoGlobal [[(_x select 1), (_x select 2), (_x select 3), (_x select 4), (_x select 5), (_x select 6), (_x select 7)], 1];
         };
     };
 } forEach _chestpackItems;

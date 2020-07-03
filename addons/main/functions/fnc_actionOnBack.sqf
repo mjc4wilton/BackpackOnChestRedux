@@ -37,7 +37,7 @@ private _backpack = backpackContainer _player;
             _backpack addMagazineAmmoCargo [(_x select 1), (_x select 3), (_x select 2)];
         };
         case (2): {
-            _backpack addWeaponWithAttachmentsCargoGlobal [[(_x select 1)), (_x select 2), (_x select 3), (_x select 4), (_x select 5), (_x select 6), (_x select 7)], 1];
+            _backpack addWeaponWithAttachmentsCargoGlobal [[(_x select 1), (_x select 2), (_x select 3), (_x select 4), (_x select 5), (_x select 6), (_x select 7)], 1];
         };
     };
 } forEach _chestpackItems;
