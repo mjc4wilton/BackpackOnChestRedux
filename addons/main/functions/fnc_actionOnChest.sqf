@@ -9,7 +9,7 @@
  * Nothing
  *
  * Example:
- * [player] call wilton_bocr_fnc_actionOnChest;
+ * [player] call bocr_main_fnc_actionOnChest;
  *
  * Public: No
  */

@@ -6,7 +6,7 @@ import subprocess
 
 ######## GLOBALS #########
 MAINPREFIX = "z"
-PREFIX = "wilton_bocr_"
+PREFIX = "bocr_"
 ##########################
 
 def mod_time(path):
@@ -32,7 +32,7 @@ def check_for_obsolete_pbos(addonspath, file):
 def main():
     print("""
   ####################
-  # wilton_bocr Debug Build #
+  # BOCR Debug Build #
   ####################
 """)
 

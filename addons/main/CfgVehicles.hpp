@@ -7,7 +7,7 @@ class CfgVehicles
           {
                class ACE_Equipment
                {
-                    class Wilton_BOCR_OnChest
+                    class BOCR_OnChest
                     {
                          displayName = CSTRING(onChest);
                          condition = "";
@@ -17,17 +17,17 @@ class CfgVehicles
                          priority = 2.5;
                          icon = "\zade_boc\data\actions\onchest_ca.paa";
                     };
-                    class Wilton_BOCR_OnBack : Wilton_BOCR_OnChest
+                    class BOCR_OnBack : BOCR_OnChest
                     {
                          displayName = CSTRING(onBack);
-                         condition = "!(missionNamespace getVariable ['wilton_bocr_disabled',false]) && (backpack _player isEqualTo '') && !([_player] call wilton_bocr_fnc_chestpack isEqualTo '')";
+                         condition = "!(missionNamespace getVariable ['bocr_disabled',false]) && (backpack _player isEqualTo '') && !([_player] call bocr_fnc_chestpack isEqualTo '')";
                          statement = "[_player] call FUNC(actionOnBack)";
                          icon = "\zade_boc\data\actions\onback_ca.paa";
                     };
-                    class Wilton_BOCR_Swap : Wilton_BOCR_OnChest
+                    class BOCR_Swap : BOCR_OnChest
                     {
                          displayName = CSTRING(swap);
-                         condition = "!(missionNamespace getVariable ['wilton_bocr_disabled',false]) && !(backpack _player isEqualTo '') && !([_player] call wilton_bocr_fnc_chestpack isEqualTo '')";
+                         condition = "!(missionNamespace getVariable ['bocr_disabled',false]) && !(backpack _player isEqualTo '') && !([_player] call bocr_fnc_chestpack isEqualTo '')";
                          statement = "[_player] call FUNC(actionSwap)";
                          icon = "\zade_boc\data\actions\swap_ca.paa";
                     };

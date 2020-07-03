@@ -1,1 +1,1 @@
-#include "\z\wilton_bocr\addons\blank\script_component.hpp"
+#include "\z\bocr\addons\blank\script_component.hpp"

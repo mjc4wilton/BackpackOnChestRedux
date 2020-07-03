@@ -4,13 +4,13 @@
  *
  * Arguments:
  * 0: Unit  <OBJECT>
- * 1: Backpack Classnam <STRING>
+ * 1: Backpack Classname <STRING>
  *
  * Return Value:
  * Nothing
  *
  * Example:
- * [player,"B_Kitbag_rgr"] call BackpackOnChestRedux_fnc_addChestpack;
+ * [player,"B_Kitbag_rgr"] call bocr_main_fnc_addChestpack;
  *
  * Public: No
  */
