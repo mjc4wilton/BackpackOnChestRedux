@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: DerZade, mjc4wilton
  * Triggerd by GetInMan-Eventhandler

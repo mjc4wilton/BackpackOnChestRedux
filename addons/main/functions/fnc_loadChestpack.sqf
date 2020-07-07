@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: DerZade, mjc4wilton
  * Returns current sum of mass from items stored in a chestpack.

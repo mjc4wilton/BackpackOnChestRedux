@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: DerZade, mjc4wilton
  * Returns the cargo container of a unit's chestpack. Note that this is only a prop and does not contain any items. Items which

@@ -13,7 +13,7 @@ import winreg
 
 ######## GLOBALS #########
 MAINDIR = "z"
-PROJECTDIR = "BackpackOnChestRedux"
+PROJECTDIR = "bocr"
 ##########################
 
 def main():

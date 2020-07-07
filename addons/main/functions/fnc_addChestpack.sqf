@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: DerZade, mjc4wilton
  * Adds a chestpack to a unit. If a unit already has one, the old chestpack will be ignored and will be deleted completely.
