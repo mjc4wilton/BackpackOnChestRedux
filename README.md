@@ -15,7 +15,7 @@
     <a href="https://github.com/mjc4wilton/BackpackOnChestRedux/blob/master/LICENSE">
         <img src="https://img.shields.io/badge/License-MIT-red.svg?style=flat-square" alt="ACE Project Template License">
     </a>
-    <a href="https://travis-ci.org/mjc4wilton/BackpackOnChestRedux">
+    <a href="https://travis-ci.com/mjc4wilton/BackpackOnChestRedux">
         <img src="https://img.shields.io/travis/mjc4wilton/BackpackOnChestRedux.svg?style=flat-square&label=Build" alt="BackpackOnChestRedux Build Status">
     </a>
 </p>
