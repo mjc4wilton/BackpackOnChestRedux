@@ -14,38 +14,28 @@
  *
  * Public: No
  */
-params ["_player"];
+params ["_unit"];
 
-private _chestpack = [_player] call FUNC(chestpack);
-private _chestpackItems =  [_player,false] call FUNC(chestpackItems);
-private _chestpackVariables = [_player] call FUNC(chestpackVariables);
+private _chestpack = [_unit] call FUNC(chestpack);
+private _chestpackLoadout = [_unit] call FUNC(chestpackLoadout);
+private _chestpackVariables = [_unit] call FUNC(chestpackVariables);
 
 //make sure the player has a chestpack and no backpack
-if ((_chestpack isEqualTo "") or !(backpack _player isEqualTo "")) exitWith {};
+if ((_chestpack isEqualTo "") or !(backpack _unit isEqualTo "")) exitWith {};
 
 //add pack
-_player addBackpackGlobal _chestpack;
-clearAllItemsFromBackpack _player;
-private _backpack = backpackContainer _player;
+_unit addBackpackGlobal _chestpack;
+clearAllItemsFromBackpack _unit;
+private _backpack = backpackContainer _unit;
 
 //add items
-{
-    switch (_x select 0) do {
-        case (0): {
-            _backpack addItemCargoGlobal [(_x select 1),1];
-        };
-        case (1): {
-            _backpack addMagazineAmmoCargo [(_x select 1), (_x select 3), (_x select 2)];
-        };
-        case (2): {
-            _backpack addWeaponWithAttachmentsCargoGlobal [[(_x select 1), (_x select 2), (_x select 3), (_x select 4), (_x select 5), (_x select 6), (_x select 7)], 1];
-        };
-    };
-} forEach _chestpackItems;
+private _loadout = getUnitLoadout _unit;
+_loadout set [5, [_chestpack, _chestpackLoadout]];
+_unit setUnitLoadout _loadout;
 
 //add variables
 {
      _backpack setVariable [(_x select 0), (_x select 1), true];
 } forEach _chestpackVariables;
 
-[_player] call FUNC(removeChestpack);
+[_unit] call FUNC(removeChestpack);

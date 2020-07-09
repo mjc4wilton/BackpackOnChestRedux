@@ -16,7 +16,7 @@
  */
 params ["_unit"];
 
-private _var = _unit getVariable ["bocr_chestpack",nil];
+private _var = GETVAR(_unit, GVAR(chestpack), nil);
 
 //delete chestpackContainer
      deleteVehicle ([_unit] call FUNC(chestpackContainer));
