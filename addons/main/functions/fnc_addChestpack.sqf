@@ -17,7 +17,7 @@
  *
  * Public: No
  */
-params ["_unit","_chestpackClass","_backpackLoadout","_backpackVariables"];
+params ["_unit","_chestpackClass","_backpackLoadout","_backpackVariables", "_backpackLoad"];
 
 //add HandleDisconnect-EH on server if not done yet
 if !(GETMVAR(GVAR(HDCEHadded), false)) then {
@@ -43,7 +43,7 @@ private _chestpack = createSimpleObject [_chestpackClass, getPos _unit];
 [_unit, "forceWalk", "BackpackOnChest", true] call ace_common_fnc_statusEffect_set;
 
 //set variable
-SETPVAR(_unit, GVAR(chestpack), [[_chestpackClass, _chestpack], [_getInID, _getOutID, _animID, _killedID], _backpackLoadout, _backpackVariables]);
+SETPVAR(_unit, GVAR(chestpack), [[_chestpackClass, _chestpack], [_getInID, _getOutID, _animID, _killedID], _backpackLoadout, _backpackVariables, _backpackLoad]);
 
 //execute vehicle shit
 if !(vehicle _unit isEqualTo _unit) then {

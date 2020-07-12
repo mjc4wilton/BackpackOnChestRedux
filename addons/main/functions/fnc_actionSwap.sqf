@@ -17,6 +17,7 @@
 params ["_unit"];
 
 private _backpack = backpack _unit;
+private _backpackLoad = loadBackpack _unit;
 private _backpackLoadout = ((getUnitLoadout _unit) select 5) select 1;
 private _backpackVariables = [];
 
@@ -49,4 +50,4 @@ private _backpackNew = backpackContainer _unit;
 } forEach _chestpackVariables;
 
 //add chestpack
-[_unit, _backpack, _backpackLoadout, _backpackVariables] call FUNC(addChestpack);
+[_unit, _backpack, _backpackLoadout, _backpackVariables, _backpackLoad] call FUNC(addChestpack);
