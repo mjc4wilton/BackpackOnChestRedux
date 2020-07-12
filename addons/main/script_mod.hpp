@@ -1,6 +1,6 @@
 // COMPONENT should be defined in the script_component.hpp and included BEFORE this hpp
 
-#define MAINPREFIX z
+#define MAINPREFIX x
 #define PREFIX bocr
 
 #include "script_version.hpp"
