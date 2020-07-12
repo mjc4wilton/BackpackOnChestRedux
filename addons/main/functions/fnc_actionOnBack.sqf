@@ -23,17 +23,13 @@ private _chestpackVariables = [_unit] call FUNC(chestpackVariables);
 //make sure the player has a chestpack and no backpack
 if ((_chestpack isEqualTo "") or !(backpack _unit isEqualTo "")) exitWith {};
 
-//add pack
-_unit addBackpackGlobal _chestpack;
-clearAllItemsFromBackpack _unit;
-private _backpack = backpackContainer _unit;
-
 //add items
 private _loadout = getUnitLoadout _unit;
 _loadout set [5, [_chestpack, _chestpackLoadout]];
 _unit setUnitLoadout _loadout;
 
 //add variables
+private _backpack = backpackContainer _unit;
 {
      _backpack setVariable [(_x select 0), (_x select 1), true];
 } forEach _chestpackVariables;
