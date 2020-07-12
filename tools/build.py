@@ -5,7 +5,7 @@ import sys
 import subprocess
 
 ######## GLOBALS #########
-MAINPREFIX = "z"
+MAINPREFIX = "x"
 PREFIX = "bocr_"
 ##########################
 
