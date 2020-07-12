@@ -1,1 +1,16 @@
-// FUNCTION PREPS
+PREP(actionOnBack);
+PREP(actionOnChest);
+PREP(actionSwap);
+PREP(addChestpack);
+PREP(addItemToChestpack);
+PREP(canAddItemToChestpack);
+PREP(chestpack);
+PREP(chestpackContainer);
+PREP(chestpackLoadout);
+PREP(chestpackVariables);
+PREP(EHAnimDone);
+PREP(EHGetIn);
+PREP(EHGetOut);
+PREP(EHHandleDisconnect);
+PREP(EHKilled);
+PREP(removeChestpack);
