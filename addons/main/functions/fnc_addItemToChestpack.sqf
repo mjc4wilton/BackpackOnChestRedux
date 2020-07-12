@@ -12,37 +12,17 @@
  * Nothing
  *
  * Example:
- * [player,[0,"FirstAidKit"]] call bocr_main_fnc_addItemToChestpack;
+ * [player,"FirstAidKit"] call bocr_main_fnc_addItemToChestpack;
  *
  * Public: No
  */
 params ["_unit","_item"];
 
-private _var = _unit getVariable [QGVAR(chestpack),nil];
+private _var = GETVAR(_unit, GVAR(chestpack), nil);
 
-switch (_item select 0) do {
-    case (0): {
-        //exit if there is not enough space left
-        if !([_unit,(_item select 1),1] call FUNC(canAddItemToChestpack)) exitWith {};
+//exit if there is not enough space left
+if !([_unit, _item] call FUNC(canAddItemToChestpack)) exitWith {};
+(_var select 2) pushBack [_item, 1];
 
-        (_var select 2) pushBack _item;
-    };
-    case (1): {
-        //exit if there is not enough space left
-        if !([_unit,(_item select 1),(_item select 3)] call FUNC(canAddItemToChestpack)) exitWith {};
-
-        (_var select 2) pushBack _item;
-    };
-    case (2): {
-        //exit if there is not enough space left
-        for "_i" from 1 to 7 do {
-            private _itemClass = if (!(i == 5 || i == 6)) then {_x select i} else {(_x select i) select 0};
-            if !([_unit,_itemClass,1] call FUNC(canAddItemToChestpack)) exitWith {};
-        };
-
-        (_var select 2) pushBack _item;
-    };
-};
-
-//update variable
+//update public variable
 SETPVAR(_unit, GVAR(chestpack), _var);

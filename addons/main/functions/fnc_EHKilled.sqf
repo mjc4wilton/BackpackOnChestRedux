@@ -17,7 +17,7 @@
 params ["_unit"];
 
 private _chestpack = [_unit] call FUNC(chestpack);
-private _chestpackItems =  [_unit] call FUNC(chestpackItems);
+private _chestpackLoadout =  [_unit] call FUNC(chestpackLoadout);
 private _chestpackVariables = [_unit] call FUNC(chestpackVariables);
 
 private _holder = createVehicle ["WeaponHolderSimulated", (getPos _unit), [], 0, "CAN_COLLIDE"];
@@ -29,18 +29,20 @@ clearAllItemsFromBackpack _backpack;
 
 //add items
 {
-    switch (_x select 0) do {
-        case (0): {
-            _backpack addItemCargoGlobal [(_x select 1),1];
+    if (typeName (_x select 0) == "Array") then {
+        //weapon with attachments
+        for "_i" from 0 to (_x select 1) do {
+            _backpack addWeaponWithAttachmentsCargoGlobal (_x select 0);
         };
-        case (1): {
-            _backpack addMagazineAmmoCargo [(_x select 1), (_x select 3), (_x select 2)];
-        };
-        case (2): {
-            _backpack addWeaponWithAttachmentsCargoGlobal [[(_x select 1), (_x select 2), (_x select 3), (_x select 4), (_x select 5), (_x select 6), (_x select 7)], 1];
+    } else {
+        //mags
+        if (isClass (configFile>>"CfgMagazines">> _class)) then {
+            _backpack addMagazineAmmoCargo _x;
+        } else {
+            _backpack addItemCargoGlobal _x;
         };
     };
-} forEach _chestpackItems;
+} forEach _chestpackLoadout;
 
 //add variables
 {

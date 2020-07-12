@@ -1,7 +1,7 @@
 #include "script_component.hpp"
 /*
  * Author: DerZade, mjc4wilton
- * Returns array with all items in chestpack of the given unit.
+ * Returns Unit Loadout Array of chestpack of the given unit.
  *
  * Arguments:
  * 0: Unit <OBJECT>
@@ -10,17 +10,17 @@
  * Items <ARRAY>
  *
  * Example:
- * [player] call bocr_main_fnc_chestpackItems;
+ * [player] call bocr_main_fnc_chestpackLoadout;
  *
  * Public: No
  */
 params ["_unit"];
 
 private _var = GETVAR(_unit, GVAR(chestpack), nil);
-private _items = +(_var select 2);
+private _loadout = +(_var select 2);
 
 //return objNull
-if (isNil "_var" or isNil "_items") exitWith {[]};
+if (isNil "_var" or isNil "_loadout") exitWith {[]};
 
 //return items
-_items
+_loadout
