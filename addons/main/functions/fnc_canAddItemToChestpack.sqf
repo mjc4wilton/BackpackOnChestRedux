@@ -24,22 +24,6 @@ private _preLoadPercent = _var select 4;
 //calculate space left in chestpack
 private _maximumLoad = getNumber(configFile >> "CfgVehicles" >> ([_unit] call FUNC(chestpack)) >> "maximumLoad");
 private _remainingLoad = (1 - _preLoadPercent) * _maximumLoad
-
-private _itemMass = 0;
-if (isClass (configFile>>"CfgWeapons">> _item >> "ItemInfo")) then {
-     _itemMass = getNumber(configFile>>"CfgWeapons">> _item >> "ItemInfo" >> "Mass");
-};
-if (isClass (configFile>>"CfgWeapons">> _item >> "WeaponSlotsInfo")) then {
-     _itemMass = getNumber(configFile>>"CfgWeapons">> _item >> "WeaponSlotsInfo" >> "Mass")
-};
-if (isClass (configFile>>"CfgMagazines">> _item)) then {
-     _itemMass = getNumber(configFile>>"CfgMagazines">> _item >> "Mass");
-};
-if (isClass (configFile>>"CfgVehicles">> _item)) then  {
-     _itemMass = getNumber(configFile>>"CfgVehicles">> _item >> "Mass");
-};
-if (isClass (configFile>>"CfgGlasses">> _item)) then  {
-     _itemMass = getNumber(configFile>>"CfgGlasses">> _item >> "Mass");
-};
+private _itemMass = _item call FUNC(itemMass);
 
 if (_itemMass * _amount > _remainingLoad) then {false} else {true};

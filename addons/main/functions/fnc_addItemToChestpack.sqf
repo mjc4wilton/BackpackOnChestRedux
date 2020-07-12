@@ -22,7 +22,13 @@ private _var = GETVAR(_unit, GVAR(chestpack), nil);
 
 //exit if there is not enough space left
 if !([_unit, _item] call FUNC(canAddItemToChestpack)) exitWith {};
+
+//add item
+private _itemMass = [_item] call FUNC(itemMass);
+private _maximumLoad = getNumber(configFile >> "CfgVehicles" >> ([_unit] call FUNC(chestpack)) >> "maximumLoad");
+private _preLoadPercent = _var select 4;
 (_var select 2) pushBack [_item, 1];
+_var set [4, (_preLoadPercent + (_itemMass / _maximumLoad))];
 
 //update public variable
 SETPVAR(_unit, GVAR(chestpack), _var);
