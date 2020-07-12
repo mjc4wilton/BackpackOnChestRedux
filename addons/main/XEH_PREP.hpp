@@ -13,4 +13,5 @@ PREP(EHGetIn);
 PREP(EHGetOut);
 PREP(EHHandleDisconnect);
 PREP(EHKilled);
+PREP(itemMass);
 PREP(removeChestpack);
