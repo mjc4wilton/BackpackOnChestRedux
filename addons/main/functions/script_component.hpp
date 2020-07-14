@@ -1,1 +1,1 @@
-#include "\z\bocr\addons\main\script_component.hpp"
+#include "\x\bocr\addons\main\script_component.hpp"
