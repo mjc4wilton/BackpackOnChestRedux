@@ -43,9 +43,9 @@ private _chestpack = createSimpleObject [_chestpackClass, getPos _unit];
 [_unit, "forceWalk", "BackpackOnChest", true] call ace_common_fnc_statusEffect_set;
 
 //set variable
-SETPVAR(_unit, GVAR(chestpack), [[_chestpackClass, _chestpack], [_getInID, _getOutID, _animID, _killedID], _backpackLoadout, _backpackVariables, _backpackLoad]);
+_unit setVariable [QGVAR(chestpack), [[_chestpackClass, _chestpack], [_getInID, _getOutID, _animID, _killedID], _backpackLoadout, _backpackVariables, _backpackLoad], true];
 
-//execute vehicle shit
+//handle vehicles
 if !(vehicle _unit isEqualTo _unit) then {
     [_unit, "", vehicle _unit] call FUNC(EHGetIn);
 } else {

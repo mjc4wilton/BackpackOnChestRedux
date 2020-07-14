@@ -18,7 +18,7 @@
  */
 params ["_unit","_item"];
 
-private _var = GETVAR(_unit, GVAR(chestpack), nil);
+private _var = _unit getVariable [QGVAR(chestpack), nil];
 
 //exit if there is not enough space left
 if !([_unit, _item] call FUNC(canAddItemToChestpack)) exitWith {};
@@ -31,4 +31,4 @@ private _preLoadPercent = _var select 4;
 _var set [4, (_preLoadPercent + (_itemMass / _maximumLoad))];
 
 //update public variable
-SETPVAR(_unit, GVAR(chestpack), _var);
+_unit setVariable [QGVAR(chestpack), _var, true];

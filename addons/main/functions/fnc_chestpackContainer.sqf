@@ -18,7 +18,7 @@
 params ["_unit"];
 
 if (isNil "_unit") exitWith {["No proper argument(s) given."] call BIS_fnc_error};
-private _var = GETVAR(_unit, GVAR(chestpack), nil);
+private _var = _unit getVariable [QGVAR(chestpack), nil];
 private _chestpack = (_var select 0) select 1;
 
 //return objNull

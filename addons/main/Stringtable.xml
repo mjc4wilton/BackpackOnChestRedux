@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Project name="BOCR">
+	<Package name="Main">
+        <Key ID="STR_BOCR_Main_OnChest">
+            <Original>Put backpack on chest</Original>
+            <English>Put backpack on chest</English>
+            <French>Mettre le sac à dos en position ventral</French>
+            <German>Rucksack auf den Bauch schnallen</German>
+            <Japanese>バックパックを前側にする</Japanese>
+        </Key>
+        <Key ID="STR_BOCR_Main_OnBack">
+            <Original>Put backpack on back</Original>
+            <English>Put backpack on back</English>
+            <French>Remettre le sac à dos ventral dans le dos</French>
+            <German>Rucksack auf den Rücken</German>
+            <Japanese>バックパックを後ろ側にする</Japanese>
+        </Key>
+        <Key ID="STR_BOCR_Main_Swap">
+            <Original>Swap rucksacks</Original>
+            <English>Swap rucksacks</English>
+            <French>Intervertir les sacs</French>
+            <German>Rucksäcke tauschen</German>
+            <Japanese>バックパックを入れ替え</Japanese>
+        </Key>
+	</Package>
+</Project>

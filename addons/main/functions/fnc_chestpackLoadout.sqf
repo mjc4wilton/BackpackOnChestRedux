@@ -16,7 +16,7 @@
  */
 params ["_unit"];
 
-private _var = GETVAR(_unit, GVAR(chestpack), nil);
+private _var = _unit getVariable [QGVAR(chestpack), nil];
 private _loadout = +(_var select 2);
 
 //return objNull

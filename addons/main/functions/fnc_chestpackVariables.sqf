@@ -16,11 +16,11 @@
  */
 params ["_unit"];
 
-private _var = GETVAR(_unit, GVAR(chestpack), nil);
+private _var = _unit getVariable [QGVAR(chestpack), nil];
 private _variables = +(_var select 3);
 
 //return objNull
-if (isNil "_var" or isNil "_items") exitWith {[]};
+if (isNil "_var" or isNil "_variables") exitWith {[]};
 
 //return items
 _variables

@@ -25,7 +25,7 @@ private _backpackVariables = [];
 //Variable Handling
 {
     private _val = (backpackContainer _unit) getVariable _x;
-    _backpackVariables pushback [_x, _val];
+    _backpackVariables pushBack [_x, _val];
 } forEach (allVariables (backpackContainer _unit));
 
 [_unit, _backpack, _backpackLoadout, _backpackVariables, _backpackLoad] call FUNC(addChestpack);

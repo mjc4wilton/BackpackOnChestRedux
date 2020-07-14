@@ -16,7 +16,7 @@
  */
 params ["_unit"];
 
-private _var = GETVAR(_unit, GVAR(chestpack), nil);
+private _var = _unit getVariable [QGVAR(chestpack), nil];
 
 //return ""
 if (isNil "_var") exitWith {""};
