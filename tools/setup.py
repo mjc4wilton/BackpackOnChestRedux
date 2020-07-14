@@ -12,7 +12,7 @@ import subprocess
 import winreg
 
 ######## GLOBALS #########
-MAINDIR = "z"
+MAINDIR = "x"
 PROJECTDIR = "bocr"
 ##########################
 
