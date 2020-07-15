@@ -28,17 +28,16 @@
 
 A rewrite and continuation of the original BackpackOnChest mod by DerZade. This mod allows you to have a backpack on your chest and on your back at the same time with movement penalties. Great for parachutes!
 
-# Improvements from the original
+### Improvements from the original
 - Optimized code.
 - Support for variables associated with the backpack (for items such as the ACE Gunbag).
 - Transition to an easier development platform with the support of CBA and ACE macros.
 - Various other improvements.
 
-### Development Environment
-
-See the [ACE3 documentation](https://ace3mod.com/wiki/development/setting-up-the-development-environment.html) on setting up your development environment.
-
-
-### Usage
+### Use
 
 Download and install like any other ARMA 3 mod. There is a CBA setting to disable the mod if desired.
+
+# Development
+
+See the [ACE3 documentation](https://ace3mod.com/wiki/development/setting-up-the-development-environment.html) on setting up your development environment.
