@@ -5,6 +5,7 @@
             <Original>Prohibit BackpackOnChest</Original>
             <English>Prohibit BackpackOnChest</English>
             <Chinese>禁用胸前背包</Chinese>
+            <Chinesesimp>背包前置功能已禁用</Chinesesimp>
             <French>Interdire le sac en position ventral </French>
             <German>BackpackOnChest verbieten</German>
             <Japanese>BackpackOnChest を制限</Japanese>
@@ -13,6 +14,7 @@
             <Original>Put backpack on chest</Original>
             <English>Put backpack on chest</English>
             <Chinese>把背包放置胸前</Chinese>
+            <Chinesesimp>将背包置于胸前</Chinesesimp>
             <French>Mettre le sac à dos en position ventral</French>
             <German>Rucksack auf den Bauch schnallen</German>
             <Japanese>バックパックを前側にする</Japanese>
@@ -21,6 +23,7 @@
             <Original>Put backpack on back</Original>
             <English>Put backpack on back</English>
             <Chinese>把背包背著</Chinese>
+            <Chinesesimp>将背包置于后背</Chinesesimp>
             <French>Remettre le sac à dos ventral dans le dos</French>
             <German>Rucksack auf den Rücken</German>
             <Japanese>バックパックを後ろ側にする</Japanese>
@@ -29,6 +32,7 @@
             <Original>Swap rucksacks</Original>
             <English>Swap rucksacks</English>
             <Chinese>前後背包交換</Chinese>
+            <Chinesesimp>交换背包位置</Chinesesimp>
             <French>Intervertir les sacs</French>
             <German>Rucksäcke tauschen</German>
             <Japanese>バックパックを入れ替え</Japanese>
