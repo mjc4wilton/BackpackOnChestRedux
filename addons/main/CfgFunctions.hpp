@@ -1,4 +1,5 @@
-#define REDIRECT_PATH "\grad_boc\functions\zade_boc\fn_redirectFunction.sqf"
+#include "script_component.hpp"
+#define REDIRECT_PATH QPATHTOF(functions\fnc_legacyRedirect.sqf)
 
 class CfgFunctions {
 	class zade_boc {

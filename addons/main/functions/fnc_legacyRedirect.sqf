@@ -17,7 +17,7 @@
  */
 if (_fnc_scriptName isEqualTo "") exitWith {};
 
-private _newFunction = format["bocr%1",_fnc_scriptName select [8]];
+private _newFunction = format["bocr_main%1",_fnc_scriptName select [8]];
 
 private _warnMessage = format["'%1' is deprecated and no longer supported. Attempting to use '%2' instead. This may cause errors.", _fnc_scriptName, _newFunction];
 WARNING(_warnMessage);
