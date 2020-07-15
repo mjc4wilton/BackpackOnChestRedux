@@ -2,14 +2,18 @@
 <Project name="BOCR">
 	<Package name="Main">
         <Key ID="STR_BOCR_Main_Disable">
-            <Original>Prohibit BackpackOnChest</Original>
-            <English>Prohibit BackpackOnChest</English>
+            <Original>Disable BackpackOnChest</Original>
+            <English>Disable BackpackOnChest</English>
             <Chinese>禁用胸前背包</Chinese>
             <Chinesesimp>背包前置功能已禁用</Chinesesimp>
             <French>Interdire le sac en position ventral </French>
             <German>BackpackOnChest verbieten</German>
             <Japanese>BackpackOnChest を制限</Japanese>
             <Spanish>Prohibir BackpackOnChest</Spanish>
+        </Key>
+        <Key ID="STR_BOCR_Main_Disable_Description">
+            <Original>Prohibit BackpackOnChest features</Original>
+            <English>Prohibit BackpackOnChest features</English>
         </Key>
         <Key ID="STR_BOCR_Main_OnChest">
             <Original>Put backpack on chest</Original>
