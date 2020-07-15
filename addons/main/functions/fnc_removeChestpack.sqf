@@ -30,4 +30,4 @@ _unit removeEventHandler ["Killed",(_var select 1) select 3];
 [_unit, "forceWalk", "BackpackOnChest", false] call ace_common_fnc_statusEffect_set;
 
 //reset variable
-SETPVAR(_unit. GVAR(chestpack), nil);
+_unit setVariable [QGVAR(chestpack), nil, true];

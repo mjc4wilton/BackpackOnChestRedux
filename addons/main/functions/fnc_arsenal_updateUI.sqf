@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: DerZade, mjc4wilton
  * Called when backpack of arsenal unit changes. Updates Button icon / tooltip.
@@ -31,16 +32,16 @@ if (!(_backpack isEqualTo "") and !(_chestpack isEqualTo "")) then {_action = "s
 
 switch (_action) do {
     case ("onBack"): {
-        (_display displayCtrl 9233) ctrlSetText "main\ui\onBack_ca.paa";
-        (_display displayCtrl 9233) ctrlSetTooltip LLSTRING("onBack");
+        (_display displayCtrl 9233) ctrlSetText QPATHTOF(ui\onback_ca.paa);
+        (_display displayCtrl 9233) ctrlSetTooltip LLSTRING(onBack);
     };
     case ("onChest"): {
-        (_display displayCtrl 9233) ctrlSetText "main\ui\onChest_ca.paa";
-        (_display displayCtrl 9233) ctrlSetTooltip LLSTRING("onChest");
+        (_display displayCtrl 9233) ctrlSetText QPATHTOF(ui\onchest_ca.paa);
+        (_display displayCtrl 9233) ctrlSetTooltip LLSTRING(onChest);
     };
     case ("swap"): {
-        (_display displayCtrl 9233) ctrlSetText "main\ui\swap_ca.paa";
-        (_display displayCtrl 9233) ctrlSetTooltip LLSTRING("swap");
+        (_display displayCtrl 9233) ctrlSetText QPATHTOF(ui\swap_ca.paa);
+        (_display displayCtrl 9233) ctrlSetTooltip LLSTRING(swap);
     };
 };
 

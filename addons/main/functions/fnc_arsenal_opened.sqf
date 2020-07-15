@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: DerZade, mjc4wilton
  * Called by XEH_postInit. Creates button.
