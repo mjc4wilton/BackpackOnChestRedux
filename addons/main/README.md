@@ -1,4 +1,4 @@
 bocr_main
 ========
 
-Backbone of other components, defining most of the commonly used macros.
+Backbone of other components. Responsible for the most implementations.

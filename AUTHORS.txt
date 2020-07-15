@@ -1,6 +1,7 @@
-﻿# CONTRIBUTOR LIST
+# CONTRIBUTOR LIST
 
 # CORE TEAM
 mjc4wilton (mjc4wilton@gmail.com)
+DerZade
 
 # CONTRIBUTORS
