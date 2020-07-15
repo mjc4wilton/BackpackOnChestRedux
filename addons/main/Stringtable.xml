@@ -9,6 +9,7 @@
             <French>Interdire le sac en position ventral </French>
             <German>BackpackOnChest verbieten</German>
             <Japanese>BackpackOnChest を制限</Japanese>
+            <Spanish>Prohibir BackpackOnChest</Spanish>
         </Key>
         <Key ID="STR_BOCR_Main_OnChest">
             <Original>Put backpack on chest</Original>
@@ -18,6 +19,7 @@
             <French>Mettre le sac à dos en position ventral</French>
             <German>Rucksack auf den Bauch schnallen</German>
             <Japanese>バックパックを前側にする</Japanese>
+            <Spanish>Poner mochila en el pecho</Spanish>
         </Key>
         <Key ID="STR_BOCR_Main_OnBack">
             <Original>Put backpack on back</Original>
@@ -27,6 +29,7 @@
             <French>Remettre le sac à dos ventral dans le dos</French>
             <German>Rucksack auf den Rücken</German>
             <Japanese>バックパックを後ろ側にする</Japanese>
+            <Spanish>Poner mochila en la espalda</Spanish>
         </Key>
         <Key ID="STR_BOCR_Main_Swap">
             <Original>Swap rucksacks</Original>
@@ -36,6 +39,7 @@
             <French>Intervertir les sacs</French>
             <German>Rucksäcke tauschen</German>
             <Japanese>バックパックを入れ替え</Japanese>
+            <Spanish>Intercambiar mochilas</Spanish>
         </Key>
 	</Package>
 </Project>
