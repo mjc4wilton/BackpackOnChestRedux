@@ -20,6 +20,8 @@ PREP(EHGetOut);
 PREP(EHHandleDisconnect);
 PREP(EHKilled);
 PREP(itemMass);
+PREP(moduleAdd);
+PREP(moduleOnChest);
 PREP(removeChestpack);
 PREP(removeItemFromChestpack);
 PREP(removeMagFromChestpack);
