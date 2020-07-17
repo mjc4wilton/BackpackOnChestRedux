@@ -52,10 +52,10 @@ class CfgVehicles {
             description = CSTRING(ModuleAdd_Description);
             class AnyPerson1 {
                 description = "Short description";
-				displayName = "Any BLUFOR unit"; // Custom name
-				icon = "iconMan"; // Custom icon (can be file path or CfgVehicleIcons entry)
-				side = 1; // Custom side (will determine icon color)
-			};
+                displayName = "Any BLUFOR unit"; // Custom name
+                icon = "iconMan"; // Custom icon (can be file path or CfgVehicleIcons entry)
+                side = 1; // Custom side (will determine icon color)
+            };
             class AnyPerson2 : AnyPerson1 {};
         };
     };
