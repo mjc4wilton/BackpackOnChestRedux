@@ -36,7 +36,7 @@ clearAllItemsFromBackpack _backpack;
         };
     } else {
         //mags
-        if (isClass (configFile>>"CfgMagazines">> _class)) then {
+        if (isClass (configFile>>"CfgMagazines">> (_x select 0))) then {
             _backpack addMagazineAmmoCargo _x;
         } else {
             _backpack addItemCargoGlobal _x;

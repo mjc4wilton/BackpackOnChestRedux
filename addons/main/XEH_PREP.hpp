@@ -22,3 +22,4 @@ PREP(EHKilled);
 PREP(itemMass);
 PREP(removeChestpack);
 PREP(removeItemFromChestpack);
+PREP(removeMagFromChestpack);
