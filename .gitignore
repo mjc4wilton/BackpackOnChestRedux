@@ -1,4 +1,7 @@
 release/*
+releases/*
+keys/*
+.hemtt/local
 *.cache
 *.pbo
 texHeaders.bin

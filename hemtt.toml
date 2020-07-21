@@ -12,8 +12,8 @@ files = [
     "meta.cpp"
 ]
 
-keyname = "{{prefix}}_{{version}}"
-signame = "{{prefix}}_{{version}}-{{git \"id 8\"}}"
+key_name = "{{prefix}}_{{version}}"
+authority = "{{prefix}}_{{version}}-{{git \"id 8\"}}"
 
 releasebuild = [
     "@zip bocr_{{semver.major}}.{{semver.minor}}.{{semver.patch}}"
