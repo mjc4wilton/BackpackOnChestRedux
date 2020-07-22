@@ -21,5 +21,6 @@ private _newFunction = format["bocr_main%1",_fnc_scriptName select [8]];
 
 private _warnMessage = format["'%1' is deprecated and no longer supported. Attempting to use '%2' instead. This may cause errors.", _fnc_scriptName, _newFunction];
 WARNING(_warnMessage);
+WARNING("Use of deprecated function detected. See https://github.com/mjc4wilton/BackpackOnChestRedux/wiki/Transitioning-from-zade_boc-to-bocr to help migrate to the new functions.");
 
 _this call (missionNamespace getVariable [_newFunction,{}]);
