@@ -15,7 +15,7 @@
  *
  * Public: Yes
  */
-params ["_unit"];
+params ["_unit", "_id", "_uid", "_name"];
 
 if !([_unit] call FUNC(chestpack) isEqualTo "") then {
      [[_unit] call FUNC(chestpackContainer), _unit] spawn {

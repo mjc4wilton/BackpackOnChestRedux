@@ -21,14 +21,14 @@ params ["_unit","_chestpackClass","_backpackLoadout","_backpackVariables", "_bac
 
 //add HandleDisconnect-EH on server if not done yet
 if !(GETMVAR(GVAR(HDCEHadded), false)) then {
-     [[[],{addMissionEventHandler ["HandleDisconnect", FUNC(EHHandleDisconnect)];}], "BIS_fnc_call", false] call BIS_fnc_MP;
-     GVAR(HDCEHadded) = true;
-     publicVariable QGVAR(HDCEHadded);
+    [QGVAR(handleDisconnect), []] call CBA_fnc_serverEvent;
+    GVAR(HDCEHadded) = true;
+    publicVariable QGVAR(HDCEHadded);
 };
 
 //delete existing chestpack, if there is one
 if ([_unit] call FUNC(chestpack) != "") then {
-     [_unit] call FUNC(removeChestpack);
+    [_unit] call FUNC(removeChestpack);
 };
 
 //add EHs
