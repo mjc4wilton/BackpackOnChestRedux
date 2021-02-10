@@ -20,9 +20,12 @@ params ["_unit","_anim"];
 if (isNil "_unit") exitWith {["No proper argument(s) given."] call BIS_fnc_error};
 
 _chestpack = [_unit] call FUNC(chestpackContainer);
+_chestpackClass = [_unit] call FUNC(chestpack);
 
 //freefall
 if ((animationState _unit) find "halofreefall_" isEqualTo 0) then {
-     _chestpack attachTo [_unit,[0,-0.4,0.05],"pelvis"];
-     _chestpack setVectorDirandUp [[0,0,1],[0,1,0]];
+    if !(_chestpackClass in GVAR(exceptions)) then {
+        _chestpack attachTo [_unit,[0,-0.4,0.05],"pelvis"];
+        _chestpack setVectorDirandUp [[0,0,1],[0,1,0]];
+    };
 };
