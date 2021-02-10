@@ -1,5 +1,6 @@
 name = "BackpackOnChestRedux"
 prefix = "bocr"
+mainprefix = "x"
 author = "DerZade, mjc4wilton"
 files = [
     "*.dll",
@@ -14,6 +15,10 @@ files = [
 
 key_name = "{{prefix}}_{{version}}"
 authority = "{{prefix}}_{{version}}-{{git \"id 8\"}}"
+
+include = [
+    "./include"
+]
 
 releasebuild = [
     "@zip bocr_{{semver.major}}.{{semver.minor}}.{{semver.patch}}"
