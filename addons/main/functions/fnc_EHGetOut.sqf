@@ -27,4 +27,6 @@ private _chestpack = [_unit] call FUNC(chestpackContainer);
 [_chestpack, [[-0.25,-1,0],[0,0,1]]] remoteExec ["setVectorDirAndUp", 0];
 [_chestpack, false] remoteExec ["hideObjectGlobal", 0];
 
-[_unit, "forceWalk", "BackpackOnChest", true] call ace_common_fnc_statusEffect_set;
+if (GVAR(walk)) then {
+    [_unit, "forceWalk", "BackpackOnChest", true] call ace_common_fnc_statusEffect_set;
+};

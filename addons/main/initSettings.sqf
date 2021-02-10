@@ -7,3 +7,11 @@
     false, // default value
     true // isGlobal
 ] call CBA_fnc_addSetting;
+
+[
+    QGVAR(walk), "CHECKBOX",
+    [LSTRING(Walk), LSTRING(Walk_Description)],
+    "Backpack On Chest",
+    true, // default value
+    true // isGlobal
+] call CBA_fnc_addSetting;

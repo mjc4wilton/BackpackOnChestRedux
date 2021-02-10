@@ -40,7 +40,9 @@ private _killedID = _unit addEventHandler ["Killed",FUNC(EHKilled)];
 //create chestpack itself
 private _chestpack = createSimpleObject [_chestpackClass, getPos _unit];
 
-[_unit, "forceWalk", "BackpackOnChest", true] call ace_common_fnc_statusEffect_set;
+if (GVAR(walk)) then {
+    [_unit, "forceWalk", "BackpackOnChest", true] call ace_common_fnc_statusEffect_set;
+};
 
 //set variable
 _unit setVariable [QGVAR(chestpack), [[_chestpackClass, _chestpack], [_getInID, _getOutID, _animID, _killedID], _backpackLoadout, _backpackVariables, _backpackLoad], true];

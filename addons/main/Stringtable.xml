@@ -15,6 +15,14 @@
             <Original>Prohibit BackpackOnChest features</Original>
             <English>Prohibit BackpackOnChest features</English>
         </Key>
+        <Key ID="STR_BOCR_Main_Walk">
+            <Original>Force Walking</Original>
+            <English>Force Walking</English>
+        </Key>
+        <Key ID="STR_BOCR_Main_Walk_Description">
+            <Original>Player is forced to walk when backpack is on chest</Original>
+            <English>Player is forced to walk when backpack is on chest</English>
+        </Key>
         <Key ID="STR_BOCR_Main_ModuleAdd_Displayname">
 			<Original>Add Chestpack</Original>
 			<English>Add Chestpack</English>
