@@ -11,7 +11,7 @@
  * Nothing
  *
  * Example:
- * _this call bocr_main_fnc_HandleDisconnect;
+ * _this call bocr_main_fnc_EHHandleDisconnect;
  *
  * Public: Yes
  */
