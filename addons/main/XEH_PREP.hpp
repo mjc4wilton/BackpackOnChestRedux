@@ -1,3 +1,5 @@
+PREP(actionCutLoweringLine);
+PREP(actionLower);
 PREP(actionOnBack);
 PREP(actionOnChest);
 PREP(actionSwap);
@@ -9,7 +11,9 @@ PREP(arsenal_opened);
 PREP(arsenal_postInit);
 PREP(arsenal_updateUI);
 PREP(canAddItemToChestpack);
+PREP(canCutLoweringLine);
 PREP(canMovePack);
+PREP(canLower);
 PREP(chestpack);
 PREP(chestpackContainer);
 PREP(chestpackLoadout);

@@ -123,8 +123,17 @@ class CfgVehicles {
                     statement = QUOTE([_player] call FUNC(actionSwap));
                     icon = QPATHTOF(ui\swap_ca.paa);
                 };
+                class GVAR(lower) : GVAR(onChest) {
+                    displayName = CSTRING(lower);
+                    condition = QUOTE([_player] call FUNC(canLower));
+                    statement = QUOTE([_player] call FUNC(actionLower));
+                };
+                class GVAR(cutLoweringLine) : GVAR(onChest) {
+                    displayName = CSTRING(cutLoweringLine);
+                    condition = QUOTE([_player] call FUNC(canCutLoweringLine));
+                    statement = QUOTE([_player] call FUNC(actionCutLoweringLine));
+                };
             };
         };
     };
-
 };
