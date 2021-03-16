@@ -7,7 +7,7 @@
  * 0: unit <OBJECT>
  *
  * Return Value:
- * Nothing
+ * Weapon Holder <OBJECT>
  *
  * Example:
  * _this call bocr_main_fnc_EHKilled;
@@ -51,3 +51,5 @@ clearAllItemsFromBackpack _backpack;
 
 //remove the backpack from the dead unit
 [_unit] call FUNC(removeChestpack);
+
+_holder
