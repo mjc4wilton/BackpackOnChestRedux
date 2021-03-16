@@ -104,7 +104,7 @@ class CfgVehicles {
             class ACE_Equipment {
                 class GVAR(onChest) {
                     displayName = CSTRING(OnChest);
-                    condition = QUOTE(!(GVAR(disabled)) && !(backpack _player isEqualTo """") && (([_player] call FUNC(chestpack)) isEqualTo """"));
+                    condition = QUOTE([_player] call FUNC(canMovePack) && {!(backpack _player == '') && (([_player] call FUNC(chestpack)) == '')});
                     exceptions[] = {"isNotInside"};
                     statement = QUOTE([_player] call FUNC(actionOnChest));
                     showDisabled = 0;
@@ -113,13 +113,13 @@ class CfgVehicles {
                 };
                 class GVAR(onBack) : GVAR(onChest) {
                     displayName = CSTRING(OnBack);
-                    condition = QUOTE(!(GVAR(disabled)) && (backpack _player isEqualTo """") && !(([_player] call FUNC(chestpack)) isEqualTo """"));
+                    condition = QUOTE([_player] call FUNC(canMovePack) && {(backpack _player == '') && !(([_player] call FUNC(chestpack)) == '')});
                     statement = QUOTE([_player] call FUNC(actionOnBack));
                     icon = QPATHTOF(ui\onback_ca.paa);
                 };
                 class GVAR(swap) : GVAR(onChest) {
                     displayName = CSTRING(Swap);
-                    condition = QUOTE(!(GVAR(disabled)) && !(backpack _player isEqualTo """") && !(([_player] call FUNC(chestpack)) isEqualTo """"));
+                    condition = QUOTE([_player] call FUNC(canMovePack) && {!(backpack _player == '') && !(([_player] call FUNC(chestpack)) == '')});
                     statement = QUOTE([_player] call FUNC(actionSwap));
                     icon = QPATHTOF(ui\swap_ca.paa);
                 };

@@ -9,6 +9,7 @@ PREP(arsenal_opened);
 PREP(arsenal_postInit);
 PREP(arsenal_updateUI);
 PREP(canAddItemToChestpack);
+PREP(canMovePack);
 PREP(chestpack);
 PREP(chestpackContainer);
 PREP(chestpackLoadout);
