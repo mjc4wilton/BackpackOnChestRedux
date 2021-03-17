@@ -34,7 +34,7 @@ _holder setVelocity velocity _chute;
 private _ropeLength = [LENGTH_NONSTEERABLE, LENGTH_STEERABLE] select (_chute isKindOf "Paraglide");
 private _rope = ropeCreate [
     _ropeTop, [0,0,0],
-    _holder, [-0.1,-0.6,-0.55],
+    _holder, [0.1,-0.2,-0.55],
     _ropeLength
 ];
 
