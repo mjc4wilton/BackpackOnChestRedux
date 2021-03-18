@@ -1,6 +1,6 @@
 #include "script_component.hpp"
 /*
- * Author: DerZade, mjc4wilton
+ * Author: DerZade, mjc4wilton, Ampersand
  * Triggerd by Killed-Eventhandler
  *
  * Arguments:
@@ -30,6 +30,7 @@ private _backpack = firstBackpack _holder;
 
 //add items
 private _cfgMagazines = configFile >> "CfgMagazines";
+private _cfgVehicles = configFile >> "CfgVehicles";
 {
     if (typeName (_x select 0) == "Array") then {
         //weapon with attachments
@@ -37,8 +38,9 @@ private _cfgMagazines = configFile >> "CfgMagazines";
             _backpack addWeaponWithAttachmentsCargoGlobal _x;
         };
     } else {
+        private _cargoClass = (_x select 0);
         //mags
-        if (isClass (_cfgMagazines >> (_x select 0))) then {
+        if (isClass (_cfgMagazines >> _cargoClass)) then {
             _backpack addMagazineAmmoCargo _x;
             [{
                 params ["_backpack", "_mag", "_count", "_rounds"];
@@ -51,9 +53,17 @@ private _cfgMagazines = configFile >> "CfgMagazines";
                 diag_log "bocr_main_fnc_EHKilled timed out adding magazines";
                 diag_log _this;
             }] call CBA_fnc_waitUntilAndExecute;
-
         } else {
-            _backpack addItemCargoGlobal _x;
+            //backpacks
+            _cfgCargoBackpack = _cfgVehicles >> _cargoClass;
+            if (isClass _cfgCargoBackpack) then {
+                _backpack addBackpackCargoGlobal [
+                    (configName ([_cfgCargoBackpack] call bocr_main_fnc_getBackpackEmptyAncestor)),
+                    1
+                ];
+            } else {
+                _backpack addItemCargoGlobal _x;
+            }
         };
     };
 } forEach _chestpackLoadout;
