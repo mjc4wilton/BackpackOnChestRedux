@@ -25,7 +25,11 @@ private _holder = createVehicle ["WeaponHolderSimulated", (getPos _unit), [], 0,
 //add pack
 _holder addBackpackCargoGlobal [_chestpack, 1];
 private _backpack = firstBackpack _holder;
-clearAllItemsFromBackpack _backpack;
+clearItemCargoGlobal _backpack;
+clearWeaponCargoGlobal _backpack;
+clearMagazineCargoGlobal _backpack;
+clearBackpackCargoGlobal _backpack;
+
 
 //add items
 {
