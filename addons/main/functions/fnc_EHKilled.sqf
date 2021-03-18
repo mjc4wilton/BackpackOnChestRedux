@@ -36,8 +36,8 @@ private _cfgMagazines = configFile >> "CfgMagazines";
 {
     if (typeName (_x select 0) == "Array") then {
         //weapon with attachments
-        for "_i" from 0 to (_x select 1) do {
             _backpack addWeaponWithAttachmentsCargoGlobal (_x select 0);
+        for "_i" from 1 to (_x select 1) do {
         };
     } else {
         //mags
