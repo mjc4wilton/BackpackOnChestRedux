@@ -41,8 +41,20 @@ private _cfgMagazines = configFile >> "CfgMagazines";
         };
     } else {
         //mags
-            _backpack addMagazineAmmoCargo _x;
         if (isClass (_cfgMagazines >> (_x select 0))) then {
+            _backpack addMagazineAmmoCargo _x;
+            [{
+                params ["_backpack", "_mag", "_count", "_rounds"];
+                private _countInBackpack = {_x isEqualTo [_mag, _rounds]} count magazinesAmmoCargo _backpack;
+                if (_countInBackpack < _count) then {
+                    _backpack addMagazineAmmoCargo [_mag, 1, _rounds];
+                };
+                _countInBackpack == _count
+            }, {}, [_backpack] + _x, 1, {
+                diag_log "bocr_main_fnc_EHKilled timed out adding magazines";
+                diag_log _this;
+            }] call CBA_fnc_waitUntilAndExecute;
+
         } else {
             _backpack addItemCargoGlobal _x;
         };
