@@ -10,7 +10,7 @@
  * Weapon Holder <OBJECT>
  *
  * Example:
- * _this call bocr_main_fnc_EHKilled;
+ * [player] call bocr_main_fnc_EHKilled;
  *
  * Public: No
  */
@@ -25,10 +25,7 @@ private _holder = createVehicle ["WeaponHolderSimulated", (getPos _unit), [], 0,
 //add pack
 _holder addBackpackCargoGlobal [_chestpack, 1];
 private _backpack = firstBackpack _holder;
-clearItemCargoGlobal _backpack;
-clearWeaponCargoGlobal _backpack;
-clearMagazineCargoGlobal _backpack;
-clearBackpackCargoGlobal _backpack;
+[_backpack] call FUNC(clearCargo);
 
 
 //add items
