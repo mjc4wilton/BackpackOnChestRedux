@@ -32,6 +32,7 @@ clearBackpackCargoGlobal _backpack;
 
 
 //add items
+private _cfgMagazines = configFile >> "CfgMagazines";
 {
     if (typeName (_x select 0) == "Array") then {
         //weapon with attachments
@@ -40,8 +41,8 @@ clearBackpackCargoGlobal _backpack;
         };
     } else {
         //mags
-        if (isClass (configFile>>"CfgMagazines">> (_x select 0))) then {
             _backpack addMagazineAmmoCargo _x;
+        if (isClass (_cfgMagazines >> (_x select 0))) then {
         } else {
             _backpack addItemCargoGlobal _x;
         };
