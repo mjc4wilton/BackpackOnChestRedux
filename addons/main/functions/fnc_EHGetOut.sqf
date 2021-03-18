@@ -25,9 +25,9 @@ private _chestpack = [_unit] call FUNC(chestpackContainer);
 private _chestpackClass = [_unit] call FUNC(chestpack);
 
 if !(_chestpackClass in GVAR(exceptions)) then {
-    [_chestpack, [_unit,[0,-0.03,-0.5],"pelvis"]] remoteExec ["attachTo", 0];
-    [_chestpack, [[-0.25,-1,0],[0,0,1]]] remoteExec ["setVectorDirAndUp", 0];
-    [_chestpack, false] remoteExec ["hideObjectGlobal", 0];
+    _chestpack attachTo [_unit,[0,-0.03,-0.5],"pelvis"];
+    _chestpack setVectorDirAndUp [[-0.25,-1,0],[0,0,1]];
+    _chestpack hideObjectGlobal false;
 };
 
 if (GVAR(walk)) then {

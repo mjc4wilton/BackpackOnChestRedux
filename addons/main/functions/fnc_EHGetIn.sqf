@@ -24,11 +24,11 @@ if (isNil "_unit" or isNil "_veh") exitWith {["No proper argument(s) given."] ca
 private _chestpack = [_unit] call FUNC(chestpackContainer);
 
 if (_veh isKindOf "ParachuteBase") then {
-    [_chestpack, [_veh, [0, -0.03, -0.5]]] remoteExec ["attachTo", 0];
-    [_chestpack, [[-0.25, -1, 0], [0, 0, 1]]] remoteExec ["setVectorDirAndUp", 0];
-    [_chestpack, false] remoteExec ["hideObjectGlobal", 0];
+    _chestpack attachTo [_veh, [0, -0.03, -0.5]];
+    _chestpack setVectorDirAndUp [[-0.25, -1, 0], [0, 0, 1]];
+    _chestpack hideObjectGlobal false;
 } else {
-    _chestpack remoteExec ["detach", 0];
-    _chestpack remoteExec ["hideObjectGlobal", 0];
-    [_chestpack, [-10000,-10000,-100]] remoteExec ["setPos", 0];
+    detach _chestpack;
+    hideObjectGlobal _chestpack;
+    _chestpack setPos [-10000,-10000,-100];
 };
