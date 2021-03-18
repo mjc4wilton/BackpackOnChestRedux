@@ -57,10 +57,8 @@ private _cfgVehicles = configFile >> "CfgVehicles";
             //backpacks
             _cfgCargoBackpack = _cfgVehicles >> _cargoClass;
             if (isClass _cfgCargoBackpack) then {
-                _backpack addBackpackCargoGlobal [
-                    (configName ([_cfgCargoBackpack] call bocr_main_fnc_getBackpackEmptyAncestor)),
-                    1
-                ];
+                _backpack addBackpackCargoGlobal [_cargoClass, 1];
+                [QGVAR(clearCargoBackpacks), [_backpack]] call CBA_fnc_globalEvent;
             } else {
                 _backpack addItemCargoGlobal _x;
             }
