@@ -2,6 +2,11 @@
 
 [] call FUNC(arsenal_postInit);
 
+// Clear inventory of a container
+[QGVAR(clearAllCargo), {call FUNC(clearAllCargo)}] call CBA_fnc_addEventHandler;
+// Clear inventory of every backpack in a container
+[QGVAR(clearCargoBackpacks), {call FUNC(clearCargoBackpacks)}] call CBA_fnc_addEventHandler;
+
 if (isServer) then {
     [QGVAR(handleDisconnect), {
         addMissionEventHandler ["HandleDisconnect", FUNC(EHHandleDisconnect)];

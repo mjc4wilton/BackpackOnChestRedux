@@ -31,9 +31,7 @@ _unit setUnitLoadout _loadout;
 //can be emptied and placed in unit's backpack
 //they must each be emptied when added
 //safe since game inventory won't let players add non-empty backpacks into their backpack
-{
-    [_x] call FUNC(clearCargo);
-} forEach everyBackpack backpackContainer _unit;
+[QGVAR(clearCargoBackpacks), [backpackContainer _unit]] call CBA_fnc_globalEvent;
 
 //add variables
 private _backpack = backpackContainer _unit;

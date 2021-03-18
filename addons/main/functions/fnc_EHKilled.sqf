@@ -25,7 +25,7 @@ private _holder = createVehicle ["WeaponHolderSimulated", (getPos _unit), [], 0,
 //add pack
 _holder addBackpackCargoGlobal [_chestpack, 1];
 private _backpack = firstBackpack _holder;
-[_backpack] call FUNC(clearCargo);
+[QGVAR(clearAllCargo), [_backpack]] call CBA_fnc_globalEvent;
 
 
 //add items
