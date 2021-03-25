@@ -99,6 +99,7 @@
         </Key>
         <Key ID="STR_BOCR_Main_cutLoweringLine">
             <Original>Cut Lowering Line</Original>
+            <English>Cut Lowering Line</Original>
         </Key>
 	</Package>
 </Project>
