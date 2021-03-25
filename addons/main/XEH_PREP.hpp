@@ -33,3 +33,4 @@ PREP(moduleOnChest);
 PREP(removeChestpack);
 PREP(removeItemFromChestpack);
 PREP(removeMagFromChestpack);
+PREP(setBackpackLoadout);
