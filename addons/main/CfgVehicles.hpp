@@ -113,7 +113,7 @@ class CfgVehicles {
                 };
                 class GVAR(onBack) : GVAR(onChest) {
                     displayName = CSTRING(OnBack);
-                    condition = QUOTE([_player] call FUNC(canMovePack) && {(backpack _player == '') && !(([_player] call FUNC(chestpack)) == '')});
+                    condition = QUOTE([_player] call FUNC(canMovePack) && {(backpack _player isEqualTo '') && !(([_player] call FUNC(chestpack)) isEqualTo '')});
                     statement = QUOTE([_player] call FUNC(actionOnBack));
                     icon = QPATHTOF(ui\onback_ca.paa);
                 };
