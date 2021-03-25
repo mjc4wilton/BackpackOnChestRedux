@@ -25,7 +25,7 @@ _chute setVariable [QGVAR(loweringLine), _ropeTop, true];
 _ropeTop allowDamage false;
 _ropeTop disableCollisionWith _chute;
 
-// Weapoh holder with backpack
+// Weapon holder with backpack
 private _holder = [_unit] call FUNC(EHKilled); // Chestpack to holder
 _holder disableCollisionWith _chute;
 _holder setPos (_chute modelToWorld [0, 1, -1]);
