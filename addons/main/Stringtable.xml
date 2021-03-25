@@ -95,6 +95,7 @@
         </Key>
         <Key ID="STR_BOCR_Main_Lower">
             <Original>Lower chestpack</Original>
+            <English>Lower chestpack</English>
         </Key>
         <Key ID="STR_BOCR_Main_cutLoweringLine">
             <Original>Cut Lowering Line</Original>
