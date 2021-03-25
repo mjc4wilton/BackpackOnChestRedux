@@ -104,7 +104,7 @@ class CfgVehicles {
             class ACE_Equipment {
                 class GVAR(onChest) {
                     displayName = CSTRING(OnChest);
-                    condition = QUOTE([_player] call FUNC(canMovePack) && {!(backpack _player == '') && (([_player] call FUNC(chestpack)) == '')});
+                    condition = QUOTE([_player] call FUNC(canMovePack) && {!(backpack _player isEqualTo '') && (([_player] call FUNC(chestpack)) isEqualTo '')});
                     exceptions[] = {"isNotInside"};
                     statement = QUOTE([_player] call FUNC(actionOnChest));
                     showDisabled = 0;
