@@ -12,7 +12,7 @@ if (isServer) then {
         addMissionEventHandler ["HandleDisconnect", FUNC(EHHandleDisconnect)];
     }] call CBA_fnc_addEventHandler;
 
-    [QGVAR(initHelper), {
+    [QGVAR(checkLandedPFH), {
         params ["_ropeTop", "_holder"];
         [{
             params ["_ropeTop", "_pfhID"];

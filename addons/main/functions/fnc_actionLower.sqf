@@ -42,4 +42,4 @@ private _rope = ropeCreate [
     _ropeTop attachTo [_chute, [0,0,0]];
 }, [_chute, _ropeTop]] call CBA_fnc_execNextFrame;
 
-[QGVAR(initHelper), [_ropeTop, _holder]] call CBA_fnc_serverEvent;
+[QGVAR(checkLandedPFH), [_ropeTop, _holder]] call CBA_fnc_serverEvent;
