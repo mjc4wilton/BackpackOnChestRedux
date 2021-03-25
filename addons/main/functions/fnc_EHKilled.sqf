@@ -50,8 +50,8 @@ private _cfgVehicles = configFile >> "CfgVehicles";
                 };
                 _countInBackpack == _count
             }, {}, [_backpack] + _x, 1, {
-                diag_log "bocr_main_fnc_EHKilled timed out adding magazines";
-                diag_log _this;
+               WARNING("EHKilled timed out adding magazines");
+                TRACE_1("Container: ",_this);
             }] call CBA_fnc_waitUntilAndExecute;
         } else {
             //backpacks
