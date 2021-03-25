@@ -72,5 +72,3 @@ private _cfgVehicles = configFile >> "CfgVehicles";
 
 //remove the backpack from the dead unit
 [_unit] call FUNC(removeChestpack);
-
-_holder
