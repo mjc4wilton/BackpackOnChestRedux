@@ -7,7 +7,6 @@
  * 0: unit <OBJECT>
  *
  * Return Value:
- * Weapon Holder <OBJECT>
  *
  * Example:
  * [player] call bocr_main_fnc_EHKilled;
