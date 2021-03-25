@@ -2,6 +2,14 @@
 
 [] call FUNC(arsenal_postInit);
 
+// These events try to optimize network usage
+// by sending a single CBA Event then each machine running local commands,
+// as opposed to 4 global commands for a single backpack when using
+//      clearItemCargoGlobal _container;
+//      clearWeaponCargoGlobal _container;
+//      clearMagazineCargoGlobal _container;
+//      clearBackpackCargoGlobal _container;
+// and 4 per backpack when clearing backpacks created inside a backpack.
 // Clear inventory of a container
 [QGVAR(clearAllCargo), {call FUNC(clearAllCargo)}] call CBA_fnc_addEventHandler;
 // Clear inventory of every backpack in a container
@@ -12,6 +20,8 @@ if (isServer) then {
         addMissionEventHandler ["HandleDisconnect", FUNC(EHHandleDisconnect)];
     }] call CBA_fnc_addEventHandler;
 
+    // PFH to check when the helper object _ropeTop and the WeaponHolderSimulated
+    // holding the backpack have landed
     [QGVAR(checkLandedPFH), {
         params ["_ropeTop", "_holder"];
         [{

@@ -1,33 +1,25 @@
 #include "script_component.hpp"
 /*
- * Author: DerZade, mjc4wilton, Ampersand
- * Triggerd by Killed-Eventhandler
+ * Author: Ampersand
+ * Returns WeaponHolderSimulated with copy of chestpack
  *
  * Arguments:
- * 0: unit <OBJECT>
+ * 0: Backpack <OBJECT>
+ * 1: Loadout <ARRAY>
  *
  * Return Value:
- * Nothing
+ * 0: Success <BOOLEAN>
  *
  * Example:
- * [player] call bocr_main_fnc_EHKilled;
+ * [_backpack, (getUnitLoadout _unit) select 5 select 1] call bocr_main_fnc_setBackpackLoadout;
  *
  * Public: No
  */
 
-params ["_unit"];
+params ["_backpack", "_loadout"];
+if (isNull _backpack) exitWith {false};
 
-private _chestpack = [_unit] call FUNC(chestpack);
-private _chestpackLoadout =  [_unit] call FUNC(chestpackLoadout);
-private _chestpackVariables = [_unit] call FUNC(chestpackVariables);
-
-private _holder = createVehicle ["WeaponHolderSimulated", (getPos _unit), [], 0, "CAN_COLLIDE"];
-
-//add pack
-_holder addBackpackCargoGlobal [_chestpack, 1];
-private _backpack = firstBackpack _holder;
 [QGVAR(clearAllCargo), [_backpack]] call CBA_fnc_globalEvent;
-
 
 //add items
 private _cfgMagazines = configFile >> "CfgMagazines";
@@ -43,6 +35,8 @@ private _cfgVehicles = configFile >> "CfgVehicles";
         //mags
         if (isClass (_cfgMagazines >> _cargoClass)) then {
             _backpack addMagazineAmmoCargo _x;
+            // Above command sometimes fails on its own, like with PCML Missile
+            // in NATO Ammo Bearer's backpack
             [{
                 params ["_backpack", "_mag", "_count", "_rounds"];
                 private _countInBackpack = {_x isEqualTo [_mag, _rounds]} count magazinesAmmoCargo _backpack;
@@ -51,26 +45,21 @@ private _cfgVehicles = configFile >> "CfgVehicles";
                 };
                 _countInBackpack == _count
             }, {}, [_backpack] + _x, 1, {
-               WARNING("EHKilled timed out adding magazines");
-                TRACE_1("Container: ",_this);
+                WARNING("chestpackToHolder timed out adding magazines");
+                TRACE_1("Container: ", _this);
             }] call CBA_fnc_waitUntilAndExecute;
         } else {
             //backpacks
             _cfgCargoBackpack = _cfgVehicles >> _cargoClass;
             if (isClass _cfgCargoBackpack) then {
                 _backpack addBackpackCargoGlobal [_cargoClass, 1];
+                //
                 [QGVAR(clearCargoBackpacks), [_backpack]] call CBA_fnc_globalEvent;
             } else {
                 _backpack addItemCargoGlobal _x;
             }
         };
     };
-} forEach _chestpackLoadout;
+} forEach _loadout;
 
-//add variables
-{
-     _backpack setVariable [(_x select 0), (_x select 1), true];
-} forEach _chestpackVariables;
-
-//remove the backpack from the dead unit
-[_unit] call FUNC(removeChestpack);
+true
