@@ -26,7 +26,7 @@ _ropeTop allowDamage false;
 _ropeTop disableCollisionWith _chute;
 
 // Weapon holder with backpack
-private _holder = [_unit] call FUNC(EHKilled); // Chestpack to holder
+private _holder = [_unit] call FUNC(chestpackToHolder); // Chestpack to holder
 _holder disableCollisionWith _chute;
 _holder setPos (_chute modelToWorld [0, 1, -1]);
 _holder setVelocity velocity _chute;

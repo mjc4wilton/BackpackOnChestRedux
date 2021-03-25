@@ -17,6 +17,7 @@ PREP(canLower);
 PREP(chestpack);
 PREP(chestpackContainer);
 PREP(chestpackLoadout);
+PREP(chestpackToHolder);
 PREP(chestpackVariables);
 PREP(clearAllCargo);
 PREP(clearAllItemsFromChestpack);
