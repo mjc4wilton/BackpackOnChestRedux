@@ -18,3 +18,7 @@
 if !(hasInterface) exitWith {};
 
 [missionNamespace, "arsenalOpened", FUNC(arsenal_opened)] call BIS_fnc_addScriptedEventHandler;
+
+if (isClass (configFile >> "CfgPatches" >> "ace_arsenal")) then {
+    ["ace_arsenal_displayOpened", LINKFUNC(ace_arsenal_opened)] call CBA_fnc_addEventHandler;
+};

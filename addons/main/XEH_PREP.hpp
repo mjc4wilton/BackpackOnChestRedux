@@ -1,3 +1,6 @@
+PREP(ace_arsenal_onButtonClick);
+PREP(ace_arsenal_opened);
+PREP(ace_arsenal_updateUI);
 PREP(actionCutLoweringLine);
 PREP(actionLower);
 PREP(actionOnBack);
