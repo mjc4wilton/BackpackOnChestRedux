@@ -27,6 +27,11 @@ if ((_chestpack isEqualTo "") or !(backpack _unit isEqualTo "")) exitWith {};
 private _loadout = getUnitLoadout _unit;
 _loadout set [5, [_chestpack, _chestpackLoadout]];
 _unit setUnitLoadout _loadout;
+//prefilled versions of backpacks (ammo bearer, engineer, explosives, medic, repair, etc)
+//can be emptied and placed in unit's backpack
+//they must each be emptied when added
+//safe since game inventory won't let players add non-empty backpacks into their backpack
+[QGVAR(clearCargoBackpacks), [backpackContainer _unit]] call CBA_fnc_globalEvent;
 
 //add variables
 private _backpack = backpackContainer _unit;
