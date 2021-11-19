@@ -16,6 +16,11 @@
 [QGVAR(clearCargoBackpacks), {call FUNC(clearCargoBackpacks)}] call CBA_fnc_addEventHandler;
 
 if (isServer) then {
+    [QGVAR(hideObjectGlobal), {
+        params ["_object", "_hide"];
+        _object hideObjectGlobal _hide;
+    }] call CBA_fnc_addEventHandler;
+
     [QGVAR(handleDisconnect), {
         addMissionEventHandler ["HandleDisconnect", FUNC(EHHandleDisconnect)];
     }] call CBA_fnc_addEventHandler;

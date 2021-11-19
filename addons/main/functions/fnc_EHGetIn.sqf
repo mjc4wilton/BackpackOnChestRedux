@@ -26,9 +26,9 @@ private _chestpack = [_unit] call FUNC(chestpackContainer);
 if (_veh isKindOf "ParachuteBase") then {
     _chestpack attachTo [_veh, [0, -0.03, -0.5]];
     _chestpack setVectorDirAndUp [[-0.25, -1, 0], [0, 0, 1]];
-    _chestpack hideObjectGlobal false;
+    [QGVAR(hideObjectGlobal), [_chestpack, false]] call CBA_fnc_serverEvent;
 } else {
     detach _chestpack;
-    hideObjectGlobal _chestpack;
     _chestpack setPos [-10000,-10000,-100];
+    [QGVAR(hideObjectGlobal), [_chestpack, true]] call CBA_fnc_serverEvent;
 };
