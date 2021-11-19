@@ -18,17 +18,20 @@
 params ["_unit"];
 
 private _chute = vehicle _unit;
+private _pos = getPosASL _chute;
 
 // Rope top helper, workaround parachute rope visual bug, allow cut
-private _ropeTop = createVehicle ["ace_fastroping_helper", getPos _chute, [], 0, "CAN_COLLIDE"];
+private _ropeTop = createVehicle ["ace_fastroping_helper", [0, 0, 100], [], 0, "CAN_COLLIDE"];
 _chute setVariable [QGVAR(loweringLine), _ropeTop, true];
 _ropeTop allowDamage false;
 _ropeTop disableCollisionWith _chute;
+_ropeTop setPosASL _pos;
 
 // Weapon holder with backpack
 private _holder = [_unit] call FUNC(chestpackToHolder); // Chestpack to holder
 _holder disableCollisionWith _chute;
-_holder setPos (_chute modelToWorld [0, 1, -1]);
+_holder attachTo [_chute, [0, 1, -1]];
+detach _holder;
 _holder setVelocity velocity _chute;
 
 private _rope = ropeCreate [
@@ -39,7 +42,7 @@ private _rope = ropeCreate [
 
 [{
     params ["_chute", "_ropeTop"];
-    _ropeTop attachTo [_chute, [0,0,0]];
+    _ropeTop attachTo [_chute, [0, 0, 0]];
 }, [_chute, _ropeTop]] call CBA_fnc_execNextFrame;
 
 [QGVAR(checkLandedPFH), [_ropeTop, _holder]] call CBA_fnc_serverEvent;
