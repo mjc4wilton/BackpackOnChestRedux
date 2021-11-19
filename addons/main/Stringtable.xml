@@ -112,5 +112,9 @@
             <Original>Cut Lowering Line</Original>
             <English>Cut Lowering Line</Original>
         </Key>
+        <Key ID="STR_BOCR_Main_DiscardParachute">
+            <Original>Discard Parachute</Original>
+            <English>Discard Parachute</Original>
+        </Key>
 	</Package>
 </Project>

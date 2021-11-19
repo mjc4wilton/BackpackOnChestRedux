@@ -141,6 +141,12 @@ class CfgVehicles {
                     condition = QUOTE([_player] call FUNC(canCutLoweringLine));
                     statement = QUOTE([_player] call FUNC(actionCutLoweringLine));
                 };
+                class GVAR(discardParachute) : GVAR(onChest) {
+                    displayName = CSTRING(DiscardParachute);
+                    exceptions[] = {"isNotSwimming"};
+                    condition = QUOTE([_player] call FUNC(canDiscardParachute));
+                    statement = QUOTE([_player] call FUNC(actionDiscardParachute));
+                };
             };
         };
     };
