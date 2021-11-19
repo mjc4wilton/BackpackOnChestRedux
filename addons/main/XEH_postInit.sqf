@@ -15,6 +15,8 @@
 // Clear inventory of every backpack in a container
 [QGVAR(clearCargoBackpacks), {call FUNC(clearCargoBackpacks)}] call CBA_fnc_addEventHandler;
 
+[QGVAR(floatPack), {call FUNC(floatPack)}] call CBA_fnc_addEventHandler;
+
 if (isServer) then {
     [QGVAR(hideObjectGlobal), {
         params ["_object", "_hide"];
