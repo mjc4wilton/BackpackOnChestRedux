@@ -98,6 +98,14 @@ class CfgVehicles {
             class AnyPerson2 : AnyPerson1 {};
         };
     };
+    class Buoy_base_F;
+    class GVAR(float): Buoy_base_F {
+        author = "Ampersand";
+        displayName = "Float";
+        _generalMacro = QGVAR(float);
+        model = QPATHTOF(data\float.p3d);
+        scope = 2;
+    };
     class Man;
     class CAManBase: Man {
         class ACE_SelfActions {
