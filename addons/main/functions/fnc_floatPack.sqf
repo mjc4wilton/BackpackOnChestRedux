@@ -35,7 +35,7 @@ if (isServer) then {
         deleteVehicle (_holder getVariable QGVAR(float));
     }];
     _float addEventHandler ["EpeContact", {
-    	//params ["_object1", "_object2", "_selection1", "_selection2", "_force"];
+        //params ["_object1", "_object2", "_selection1", "_selection2", "_force"];
         params ["_float", "_object2"];
         if (isNull _object2) then {
             {
