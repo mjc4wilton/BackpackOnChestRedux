@@ -28,23 +28,8 @@ if (isServer) then {
     // PFH to check when the helper object _ropeTop and the WeaponHolderSimulated
     // holding the backpack have landed
     [QGVAR(checkLandedPFH), {
-        params ["_ropeTop", "_holder"];
-        [{
-            params ["_ropeTop", "_pfhID"];
-            if (speed _ropeTop < 1 && {getPos _ropeTop # 2 < 1}) exitWith {
-                deleteVehicle _ropeTop;
-                [_pfhID] call CBA_fnc_removePerFrameHandler;
-            };
-        }, 1, _ropeTop] call CBA_fnc_addPerFrameHandler;
-        [{
-            params ["_holder", "_pfhID"];
-            if (speed _holder < 1 && {getPos _holder # 2 < 1}) exitWith {
-                private _pos = getPos _holder;
-                _pos set [2, 0];
-                _holder setPos _pos;
-                [_pfhID] call CBA_fnc_removePerFrameHandler;
-            };
-        }, 1, _holder] call CBA_fnc_addPerFrameHandler;
+        //params ["_ropeTop", "_holder"];
+        [{call FUNC(checkLandedPFH)}, 1, _this] call CBA_fnc_addPerFrameHandler;
     }] call CBA_fnc_addEventHandler;
 };
 

@@ -17,6 +17,7 @@ PREP(canAddItemToChestpack);
 PREP(canCutLoweringLine);
 PREP(canMovePack);
 PREP(canLower);
+PREP(checkLandedPFH);
 PREP(chestpack);
 PREP(chestpackContainer);
 PREP(chestpackLoadout);
