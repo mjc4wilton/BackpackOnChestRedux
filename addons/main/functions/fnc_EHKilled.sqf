@@ -21,7 +21,8 @@ private _chestpack = [_unit] call FUNC(chestpack);
 private _chestpackLoadout =  [_unit] call FUNC(chestpackLoadout);
 private _chestpackVariables = [_unit] call FUNC(chestpackVariables);
 
-private _holder = createVehicle ["WeaponHolderSimulated", (getPos _unit), [], 0, "CAN_COLLIDE"];
+private _holder = createVehicle ["WeaponHolderSimulated", [0, 0, 0], [], 0, "CAN_COLLIDE"];
+_holder setPosASL getPosASL _unit;
 
 //add pack
 _holder addBackpackCargoGlobal [_chestpack, 1];
