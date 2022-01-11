@@ -10,3 +10,6 @@ texHeaders.bin
 *.biprivatekey
 Thumbs.db
 *.exe
+
+ArmaScriptCompiler.pdb
+libcsqfvm.dll

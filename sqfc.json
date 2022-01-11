@@ -1,0 +1,9 @@
+{
+    "inputDirs": ["P:/x/bocr/addons"],
+    "includePaths": ["P:/"],
+    "excludeList": [
+        "initsettings.sqf"
+    ],
+    "outputDir": "P:/",
+    "workerThreads": 0
+}
