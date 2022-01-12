@@ -19,5 +19,5 @@ params ["_unit"];
 
 if (GVAR(disabled)) exitWith {false};
 
-[_unit] call ace_common_fnc_isSwimming && // Can't move pack while in a parachute
-{backpackContainer _unit isKindOf "B_Parachute"}
+// Can't move pack while in a parachute
+[_unit] call ace_common_fnc_isSwimming && {backpackContainer _unit isKindOf "B_Parachute"}
