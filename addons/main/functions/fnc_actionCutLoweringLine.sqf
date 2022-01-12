@@ -17,8 +17,8 @@
 
 params ["_unit"];
 private _vehicle = vehicle _unit;
-private _ropeTop = _chute getVariable [QGVAR(loweringLine), objNull];
-_chute setVariable [QGVAR(loweringLine), objNull, true];
+private _ropeTop = _vehicle getVariable [QGVAR(loweringLine), objNull];
+_vehicle setVariable [QGVAR(loweringLine), objNull, true];
 
 if (!isNull _ropeTop) then {
     private _rope = ropes _ropeTop # 0;
