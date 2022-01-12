@@ -16,7 +16,7 @@
  */
 
 params ["_unit"];
-private _chute = vehicle _unit;
+private _vehicle = vehicle _unit;
 private _ropeTop = _chute getVariable [QGVAR(loweringLine), objNull];
 _chute setVariable [QGVAR(loweringLine), objNull, true];
 
