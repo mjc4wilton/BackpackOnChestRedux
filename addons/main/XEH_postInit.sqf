@@ -33,7 +33,7 @@ if (isServer) then {
         params ["_ropeTop", "_holder"];
         _ropeTop addEventHandler ["RopeBreak", {
             //params ["_ropeTop", "_rope", "_holder"];
-            deleteVehicle _this # 0;
+            deleteVehicle (_this select 0);
         }];
         [{call FUNC(checkLandedPFH)}, 1, _this] call CBA_fnc_addPerFrameHandler;
     }] call CBA_fnc_addEventHandler;
