@@ -20,7 +20,7 @@ params ["_holder"];
 // Float model is too big =/ Can't get it to be stable with a smaller model
 _pos = getPosASL _holder;
 _pos set [2, 0];
-private _depth = ASLToATL _pos # 2;
+private _depth = ASLToATL (_pos select 2);
 if (_depth < 5) exitWith {};
 
 // Make pack float
