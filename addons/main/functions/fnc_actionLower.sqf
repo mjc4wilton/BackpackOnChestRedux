@@ -29,7 +29,7 @@ _ropeTop setPosASL _pos;
 
 // Weapon holder with backpack
 private _holder = [_unit] call FUNC(chestpackToHolder); // Chestpack to holder
-_holder disableCollisionWith _chute;
+_holder disableCollisionWith _vehicle;
 _holder attachTo [_chute, [0, 1, -1]];
 detach _holder;
 _holder setVelocity velocity _chute;
