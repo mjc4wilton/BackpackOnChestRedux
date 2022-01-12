@@ -17,8 +17,8 @@
 
 params ["_unit"];
 
-private _chute = vehicle _unit;
-private _pos = getPosASL _chute;
+private _vehicle = vehicle _unit;
+private _pos = getPosASL _vehicle;
 
 // Rope top helper, workaround parachute rope visual bug, allow cut
 private _ropeTop = createVehicle ["ace_fastroping_helper", [0, 0, 100], [], 0, "CAN_COLLIDE"];
