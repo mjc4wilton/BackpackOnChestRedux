@@ -22,9 +22,9 @@ private _pos = getPosASL _vehicle;
 
 // Rope top helper, workaround parachute rope visual bug, allow cut
 private _ropeTop = createVehicle ["ace_fastroping_helper", [0, 0, 100], [], 0, "CAN_COLLIDE"];
-_chute setVariable [QGVAR(loweringLine), _ropeTop, true];
+_vehicle setVariable [QGVAR(loweringLine), _ropeTop, true];
 _ropeTop allowDamage false;
-_ropeTop disableCollisionWith _chute;
+_ropeTop disableCollisionWith _vehicle;
 _ropeTop setPosASL _pos;
 
 // Weapon holder with backpack
