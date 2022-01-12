@@ -41,7 +41,7 @@ private _rope = ropeCreate [
 ];
 
 [{
-    params ["_chute", "_ropeTop"];
+    params ["_vehicle", "_ropeTop"];
     _ropeTop attachTo [_vehicle, [0, 0, 0]];
 }, [_vehicle, _ropeTop]] call CBA_fnc_execNextFrame;
 
