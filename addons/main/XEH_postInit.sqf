@@ -19,8 +19,8 @@
 
 if (isServer) then {
     [QGVAR(hideObjectGlobal), {
-        params ["_object", "_hide"];
-        _object hideObjectGlobal _hide;
+        params ["_object", "_isHidden"];
+        _object hideObjectGlobal _isHidden;
     }] call CBA_fnc_addEventHandler;
 
     [QGVAR(handleDisconnect), {
