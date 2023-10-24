@@ -1,6 +1,7 @@
 name = "BackpackOnChestRedux"
-prefix = "bocr"
 mainprefix = "x"
+prefix = "bocr"
+author = "DerZade, mjc4wilton"
 
 [properties]
 author = "DerZade, mjc4wilton"
@@ -24,3 +25,21 @@ exclude = [
 
 [asc]
 enabled = true
+exclude = [
+    "/initsettings.sqf",
+    "/initkeybinds.sqf",
+    "/xeh_prep.sqf",
+    "dev",
+]
+
+[hemtt.config]
+preset = "Hemtt"
+
+[hemtt.release]
+folder = "bocr"
+
+[hemtt.launch.default]
+workshop = [
+    "450814997", # CBA_A3's Workshop ID
+    "463939057", # ACE3's Workshop ID
+]
