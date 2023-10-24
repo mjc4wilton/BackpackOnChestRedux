@@ -5,6 +5,7 @@
 *.pbo
 *.swo
 *.swp
+.vscode/*
 .hemttout/*
 keys/*
 release/*
