@@ -38,13 +38,15 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Checkout the source code
-      uses: actions/checkout@master
-    - name: Build using HEMTT
-      uses: arma-actions/hemtt@master
-      with:
-        command: build --release --ci
+      uses: actions/checkout@v3
+    - name: Setup HEMTT
+      uses: arma-actions/hemtt@v1
+    - name: Run HEMTT build
+      run: hemtt build
+    - name: Rename build folder
+      run: mv .hemttout/build .hemttout/@bocr
     - name: Upload Artifact
-      uses: actions/upload-artifact@v2-preview
+      uses: actions/upload-artifact@v3
       with:
         name: BOCR-${{ github.sha }}-nobin
-        path: releases/BOCR_*.zip
+        path: .hemttout/@*
