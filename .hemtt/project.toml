@@ -1,0 +1,26 @@
+name = "BackpackOnChestRedux"
+prefix = "bocr"
+mainprefix = "x"
+
+[properties]
+author = "DerZade, mjc4wilton"
+url = "https://github.com/mjc4wilton/BackpackOnChestRedux"
+
+[files]
+include = [
+    "*.dll",
+    "*.so",
+    "mod.cpp",
+    "README.md",
+    "AUTHORS.txt",
+    "LICENSE",
+    "logo_bocr_ca.paa",
+    "meta.cpp"
+]
+exclude = [
+    ".vscode",
+    "*.sqfc",
+]
+
+[asc]
+enabled = true

@@ -5,7 +5,6 @@
 *.pbo
 *.swo
 *.swp
-.hemtt/*
 .hemttout/*
 keys/*
 release/*
