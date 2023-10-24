@@ -6,6 +6,7 @@
 *.swo
 *.swp
 .vscode/*
+!.vscode/tasks.json
 .hemttout/*
 keys/*
 release/*
