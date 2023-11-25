@@ -1,0 +1,45 @@
+name = "BackpackOnChestRedux"
+mainprefix = "x"
+prefix = "bocr"
+author = "DerZade, mjc4wilton"
+
+[properties]
+author = "DerZade, mjc4wilton"
+url = "https://github.com/mjc4wilton/BackpackOnChestRedux"
+
+[files]
+include = [
+    "*.dll",
+    "*.so",
+    "mod.cpp",
+    "README.md",
+    "AUTHORS.txt",
+    "LICENSE",
+    "logo_bocr_ca.paa",
+    "meta.cpp"
+]
+exclude = [
+    ".vscode",
+    "*.sqfc",
+]
+
+[asc]
+enabled = true
+exclude = [
+    "/initsettings.sqf",
+    "/initkeybinds.sqf",
+    "/xeh_prep.sqf",
+    "dev",
+]
+
+[hemtt.config]
+preset = "Hemtt"
+
+[hemtt.release]
+folder = "bocr"
+
+[hemtt.launch.default]
+workshop = [
+    "450814997", # CBA_A3's Workshop ID
+    "463939057", # ACE3's Workshop ID
+]
