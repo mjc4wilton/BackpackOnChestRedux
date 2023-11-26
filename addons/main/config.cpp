@@ -18,3 +18,5 @@ class CfgPatches {
 #include "CfgModuleCategories.hpp"
 #include "CfgVehicles.hpp"
 #include "CfgFunctions.hpp"
+
+#include "ACE_Arsenal_Actions.hpp"
