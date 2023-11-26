@@ -98,6 +98,14 @@ class CfgVehicles {
             class AnyPerson2 : AnyPerson1 {};
         };
     };
+    class Buoy_base_F;
+    class GVAR(float): Buoy_base_F {
+        author = "Ampersand";
+        displayName = "Float";
+        _generalMacro = QGVAR(float);
+        model = QPATHTOF(data\float.p3d);
+        scope = 2;
+    };
     class Man;
     class CAManBase: Man {
         class ACE_SelfActions {
@@ -132,6 +140,12 @@ class CfgVehicles {
                     displayName = CSTRING(cutLoweringLine);
                     condition = QUOTE([_player] call FUNC(canCutLoweringLine));
                     statement = QUOTE([_player] call FUNC(actionCutLoweringLine));
+                };
+                class GVAR(discardParachute) : GVAR(onChest) {
+                    displayName = CSTRING(DiscardParachute);
+                    exceptions[] = {"isNotSwimming"};
+                    condition = QUOTE([_player] call FUNC(canDiscardParachute));
+                    statement = QUOTE([_player] call FUNC(actionDiscardParachute));
                 };
             };
         };

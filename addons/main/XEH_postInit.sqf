@@ -15,7 +15,14 @@
 // Clear inventory of every backpack in a container
 [QGVAR(clearCargoBackpacks), {call FUNC(clearCargoBackpacks)}] call CBA_fnc_addEventHandler;
 
+[QGVAR(floatPack), {call FUNC(floatPack)}] call CBA_fnc_addEventHandler;
+
 if (isServer) then {
+    [QGVAR(hideObjectGlobal), {
+        params ["_object", "_isHidden"];
+        _object hideObjectGlobal _isHidden;
+    }] call CBA_fnc_addEventHandler;
+
     [QGVAR(handleDisconnect), {
         addMissionEventHandler ["HandleDisconnect", FUNC(EHHandleDisconnect)];
     }] call CBA_fnc_addEventHandler;
@@ -24,22 +31,11 @@ if (isServer) then {
     // holding the backpack have landed
     [QGVAR(checkLandedPFH), {
         params ["_ropeTop", "_holder"];
-        [{
-            params ["_ropeTop", "_pfhID"];
-            if (speed _ropeTop < 1 && {getPos _ropeTop # 2 < 1}) exitWith {
-                deleteVehicle _ropeTop;
-                [_pfhID] call CBA_fnc_removePerFrameHandler;
-            };
-        }, 1, _ropeTop] call CBA_fnc_addPerFrameHandler;
-        [{
-            params ["_holder", "_pfhID"];
-            if (speed _holder < 1 && {getPos _holder # 2 < 1}) exitWith {
-                private _pos = getPos _holder;
-                _pos set [2, 0];
-                _holder setPos _pos;
-                [_pfhID] call CBA_fnc_removePerFrameHandler;
-            };
-        }, 1, _holder] call CBA_fnc_addPerFrameHandler;
+        _ropeTop addEventHandler ["RopeBreak", {
+            //params ["_ropeTop", "_rope", "_holder"];
+            deleteVehicle (_this select 0);
+        }];
+        [{call FUNC(checkLandedPFH)}, 1, _this] call CBA_fnc_addPerFrameHandler;
     }] call CBA_fnc_addEventHandler;
 };
 

@@ -15,7 +15,7 @@
  * Public: No
  */
 
-params["_unit"];
+params ["_unit"];
 
 private _backpack = backpack _unit;
 private _backpackLoad = loadBackpack _unit;
