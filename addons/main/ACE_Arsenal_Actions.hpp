@@ -6,7 +6,7 @@ class ace_arsenal_actions {
         tabs[] = {5};
         class GVAR(chestpack) {
             condition = QUOTE((_this select 0) call FUNC(chestpack) != '');
-            textStatement = QUOTE(FORMAT_1('%1',getText (configFile >> 'CfgVehicles' >> (_this select 0) call FUNC(chestpack) >> 'displayName')));
+            textStatement = QUOTE(getText (configFile >> 'CfgVehicles' >> (_this select 0) call FUNC(chestpack) >> 'displayName'));
         };
         class GVAR(onChest) {
             label = CSTRING(OnChest);
