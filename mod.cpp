@@ -9,4 +9,4 @@ tooltip = "Rewrite of the original DerZade BackpackOnChest mod";
 tooltipOwned = "Owned by mjc4wilton and DerZade";
 overview = "BackpackOnChestRedux";
 author = "mjc4wilton";
-overviewPicture = "logo_ace3_ca.paa";
+overviewPicture = "logo_bocr_ca.paa";
