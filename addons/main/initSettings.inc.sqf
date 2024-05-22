@@ -15,3 +15,8 @@
     true, // default value
     true // isGlobal
 ] call CBA_fnc_addSetting;
+
+// Blacklisted variables for mods that don't want variables to be transferred. Useful for very particular cases.
+GVAR(VarBlacklist) = [
+
+];
