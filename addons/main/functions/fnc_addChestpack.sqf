@@ -17,10 +17,14 @@
  *
  * Public: No
  */
-params ["_unit","_chestpackClass","_backpackLoadout","_backpackVariables", "_backpackLoad"];
+params ["_unit", "_chestpackClass", ["_backpackLoadout", []], ["_backpackVariables", []], ["_backpackLoad", nil]];
+
+if (_backpackLoad isEqualTo nil) then {
+    _backpackLoad = loadBackpack _unit;
+};
 
 //add HandleDisconnect-EH on server if not done yet
-if !(GETMVAR(GVAR(HDCEHadded), false)) then {
+if !(GETMVAR(GVAR(HDCEHadded),false)) then {
     [QGVAR(handleDisconnect), []] call CBA_fnc_serverEvent;
     GVAR(HDCEHadded) = true;
     publicVariable QGVAR(HDCEHadded);

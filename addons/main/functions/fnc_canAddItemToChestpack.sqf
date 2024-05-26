@@ -26,4 +26,4 @@ private _maximumLoad = getNumber(configFile >> "CfgVehicles" >> ([_unit] call FU
 private _remainingLoad = (1 - _preLoadPercent) * _maximumLoad;
 private _itemMass = [_item] call FUNC(itemMass);
 
-if (_itemMass * _amount > _remainingLoad) then {false} else {true};
+[true, false] select ((_itemMass * _amount) > _remainingLoad);

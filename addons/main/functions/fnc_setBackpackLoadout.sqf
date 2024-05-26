@@ -46,7 +46,7 @@ private _cfgVehicles = configFile >> "CfgVehicles";
                 _countInBackpack == _count
             }, {}, [_backpack] + _x, 1, {
                 WARNING("chestpackToHolder timed out adding magazines");
-                TRACE_1("Container: ", _this);
+                TRACE_1("Container: ",_this);
             }] call CBA_fnc_waitUntilAndExecute;
         } else {
             //backpacks

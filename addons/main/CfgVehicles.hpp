@@ -30,21 +30,21 @@ class CfgVehicles {
             };
             class items {
                 displayName = "Chestpack Loadout Array";
-                description = "Items (includes mags, weapons, ...) which should be contained in the chestpack. Items sperated by a ','. Item can either be just a classname (for a single) or an array [classname,amount].";
+                description = "items stored within the chestpack formatted as a sub-array of a Unit Loadout Array.";
                 typeName = "STRING";
-                defaultValue = "[""FirstAidKit"",3], ""hgun_P07_F"", [""16Rnd_9x21_Mag"",2]";
+                defaultValue = "[]";
             };
-            class mags {
-                displayName = "Chestpack magazines";
-                description = "Just for adding partially loaded mags. Mags seperated by a ','. Syntax of single mag.: [magazine, ammo count]";
+            class variables {
+                displayName = "Chestpack variables";
+                description = "Variables assigned to the chestpack as [""var_name"", var_value]";
                 typeName = "STRING";
-                defaultValue = "[""30Rnd_65x39_caseless_mag"",20], [""30Rnd_65x39_caseless_mag_Tracer"",10]";
+                defaultValue = "[]";
             };
             class code {
                 displayName = "Additional code";
                 description = "Any addition code to modify the chestpack. '_this' referes to the chestpack itself."; // Argument label
                 typeName = "STRING"; // Value type, can be "NUMBER", "STRING" or "BOOL"
-                defaultValue = "_this setObjectTextureGlobal [0, ""#(rgb,8,8,3)color(0,0,1,1)""];";
+                defaultValue = "";
             };
         };
         class ModuleDescription : ModuleDescription {
