@@ -17,9 +17,9 @@
  *
  * Public: No
  */
-params ["_unit", "_chestpackClass", ["_backpackLoadout", []], ["_backpackVariables", []], ["_backpackLoad", nil]];
+params ["_unit", "_chestpackClass", ["_backpackLoadout", []], ["_backpackVariables", []], ["_backpackLoad", -2]];
 
-if (_backpackLoad isEqualTo nil) then {
+if (_backpackLoad isEqualTo -2) then {
     _backpackLoad = loadBackpack _unit;
 };
 
