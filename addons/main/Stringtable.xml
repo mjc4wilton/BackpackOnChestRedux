@@ -11,21 +11,25 @@
             <Japanese>BackpackOnChest を制限</Japanese>
             <Spanish>Prohibir BackpackOnChest</Spanish>
             <Turkish>BackpackOnChest'i Kapat</Turkish>
+            <Russian>Отключить рюкзак на груди</Russian>
         </Key>
         <Key ID="STR_BOCR_Main_Disable_Description">
             <Original>Prohibit BackpackOnChest features</Original>
             <English>Prohibit BackpackOnChest features</English>
             <Turkish>BackpackOnChest özelliklerini yasaklayın</Turkish>
+            <Russian>Отключение возможности вешать рюкзак на грудь</Russian>
         </Key>
         <Key ID="STR_BOCR_Main_Walk">
             <Original>Force Walking</Original>
             <English>Force Walking</English>
             <Turkish>Zorla Yürüme</Turkish>
+            <Russian>Принудительная ходьба</Russian>
         </Key>
         <Key ID="STR_BOCR_Main_Walk_Description">
             <Original>Player is forced to walk when backpack is on chest</Original>
             <English>Player is forced to walk when backpack is on chest</English>
             <Turkish>Oyuncu sırt çantası gövdesindeyken yürümeye zorlanır</Turkish>
+            <Russian>Вынуждать игрока ходить когда рюкзак находится на груди</Russian>
         </Key>
         <Key ID="STR_BOCR_Main_ModuleAdd_Displayname">
             <Original>Add Chestpack</Original>
@@ -37,6 +41,7 @@
             <Japanese>チェストパック追加</Japanese>
             <Spanish>Agregar mochila al pecho</Spanish>
             <Turkish>Chestpack Ekle</Turkish>
+            <Russian>Добавить рюкзак на груди</Russian>
         </Key>
         <Key ID="STR_BOCR_Main_ModuleAdd_Description">
             <Original>Adds a chestpack (with invenory) to all syncronized Units.</Original>
@@ -48,6 +53,7 @@
             <Japanese>同期された全ユニットにチェストパック(インベントリ付)を追加します。</Japanese>
             <Spanish>Agrega una mochila al pecho (con inventario) a todas las unidades sincronizadas</Spanish>
             <Turkish>Tüm senkronize Birimlere bir Chestpack (envanter ile) ekler.</Turkish>
+            <Russian>Добавить рюкзак на груди (с инвентарем) для всех синхронизированных юнитов</Russian>
         </Key>
         <Key ID="STR_BOCR_Main_ModuleOnChest_Displayname">
             <Original>Backpack on Chest</Original>
@@ -59,6 +65,7 @@
             <Japanese>前側にバックパック</Japanese>
             <Spanish>Mochila al pecho</Spanish>
             <Turkish>Gövede de Sırt Çantası</Turkish>
+            <Russian>Рюкзак на груди</Russian>
         </Key>
         <Key ID="STR_BOCR_Main_ModuleOnChest_Description">
             <Original>Puts current backpack on the chest.</Original>
@@ -70,6 +77,7 @@
             <Japanese>現在のバックパックを前側に置きます。</Japanese>
             <Spanish>Pone la mochila actual en el pecho.</Spanish>
             <Turkish>Mevcut sırt çantasını göğsüne koyar.</Turkish>
+            <Russian>Надевает текущий рюкзак на грудь</Russian>
         </Key>
         <Key ID="STR_BOCR_Main_OnChest">
             <Original>Put backpack on chest</Original>
@@ -81,6 +89,7 @@
             <Japanese>バックパックを前側にする</Japanese>
             <Spanish>Poner mochila en el pecho</Spanish>
             <Turkish>Sırt çantasını gövdenize asın</Turkish>
+            <Russian>Надеть рюкзак на грудь</Russian>
         </Key>
         <Key ID="STR_BOCR_Main_OnBack">
             <Original>Put backpack on back</Original>
@@ -91,7 +100,8 @@
             <German>Rucksack auf den Rücken</German>
             <Japanese>バックパックを後ろ側にする</Japanese>
             <Spanish>Poner mochila en la espalda</Spanish>
-             <Turkish>Sırt çantasını sırtınıza asın</Turkish>
+            <Turkish>Sırt çantasını sırtınıza asın</Turkish>
+            <Russian>Надеть рюкзак на спину</Russian>
         </Key>
         <Key ID="STR_BOCR_Main_Swap">
             <Original>Swap rucksacks</Original>
@@ -103,6 +113,7 @@
             <Japanese>バックパックを入れ替え</Japanese>
             <Spanish>Intercambiar mochilas</Spanish>
             <Turkish>Sırt çantalarını değiştirin (Bölge)</Turkish>
+            <Russian>Поменять рюкзаки местами</Russian>
         </Key>
         <Key ID="STR_BOCR_Main_Lower">
             <Original>Lower chestpack</Original>
