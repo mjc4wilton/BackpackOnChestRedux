@@ -17,7 +17,7 @@
  *
  * Public: No
  */
-params ["_unit", "_chestpackClass", ["_backpackLoadout", []], ["_backpackVariables", []], ["_backpackLoad", -1]];
+params ["_unit", "_chestpackClass", ["_backpackLoadout", []], ["_backpackVariables", []], ["_backpackLoad", -2]];
 
 if (_backpackLoad isEqualTo -1) then {
     _backpackLoad = loadBackpack _unit;
