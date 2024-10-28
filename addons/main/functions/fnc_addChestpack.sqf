@@ -13,7 +13,7 @@
  * Nothing
  *
  * Example:
- * [player, "B_Kitbag_rgr", ["FirstAidKit", 5], ["ace_gunbag_gunbagWeapon", "srifle_GM6_F"]] call bocr_main_fnc_addChestpack;
+ * [player, "B_Kitbag_rgr", ["FirstAidKit", 5], ["ace_gunbag_gunbagWeapon", "srifle_GM6_F"], []] call bocr_main_fnc_addChestpack;
  *
  * Public: No
  */
