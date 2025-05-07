@@ -17,7 +17,7 @@
  */
 params ["_unit", "_id", "_uid", "_name"];
 
-if !([_unit] call FUNC(chestpack) isEqualTo "") then {
+if (([_unit] call FUNC(chestpack)) isNotEqualTo "") then {
      [[_unit] call FUNC(chestpackContainer), _unit] spawn {
           params ["_container","_unit"];
           sleep 1.5;

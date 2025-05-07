@@ -26,6 +26,6 @@ _chestpackClass = [_unit] call FUNC(chestpack);
 if ((animationState _unit) find "halofreefall_" isEqualTo 0) then {
     if !(_chestpackClass in GVAR(exceptions)) then {
         _chestpack attachTo [_unit,[0,-0.4,0.05],"pelvis"];
-        _chestpack setVectorDirandUp [[0,0,1],[0,1,0]];
+        _chestpack setVectorDirAndUp [[0,0,1],[0,1,0]];
     };
 };

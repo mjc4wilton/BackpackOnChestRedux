@@ -23,7 +23,7 @@ private _chestpackVariables = [_unit] call FUNC(chestpackVariables);
 private _shouldSwitchNVGs = currentVisionMode _unit != 0;
 
 //make sure the player has a chestpack and no backpack
-if ((_chestpack isEqualTo "") or !(backpack _unit isEqualTo "")) exitWith {};
+if ((_chestpack isEqualTo "") or (backpack _unit isNotEqualTo "")) exitWith {};
 
 //add items
 private _loadout = [_unit] call CBA_fnc_getLoadout;

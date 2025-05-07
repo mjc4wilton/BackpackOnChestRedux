@@ -52,7 +52,7 @@ if (GVAR(walk)) then {
 _unit setVariable [QGVAR(chestpack), [[_chestpackClass, _chestpack], [_getInID, _getOutID, _animID, _killedID], _backpackLoadout, _backpackVariables, _backpackLoad], true];
 
 //handle vehicles
-if !(vehicle _unit isEqualTo _unit) then {
+if ((vehicle _unit) isNotEqualTo _unit) then {
     [_unit, "", vehicle _unit] call FUNC(EHGetIn);
 } else {
     [_unit, "", objNull] call FUNC(EHGetOut);

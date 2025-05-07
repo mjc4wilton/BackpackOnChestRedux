@@ -14,13 +14,13 @@
  *
  * Public: No
  */
-private _center = missionnamespace getvariable ["BIS_fnc_arsenal_center", player];
+private _center = missionNamespace getVariable ["BIS_fnc_arsenal_center", player];
 
 private _chestpack = [_center] call FUNC(chestpack);
 private _backpack = backpack _center;
 
 private _action = ["onback", "onchest"] select (_chestpack isEqualTo "");
-if (!(_backpack isEqualTo "") and !(_chestpack isEqualTo "")) then {_action = "swap";};
+if ((_backpack isNotEqualTo "") and (_chestpack isNotEqualTo "")) then {_action = "swap";};
 
 //execute action
 switch (_action) do {

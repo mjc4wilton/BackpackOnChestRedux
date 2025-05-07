@@ -30,7 +30,7 @@ _null = [_units,_backpackClass,_delay] spawn {
      params ["_units","_backpackClass","_delay"];
      sleep _delay;
      {
-          if !((backpack _x) isEqualTo "") then {
+          if ((backpack _x) isNotEqualTo "") then {
                [_x] call FUNC(actionOnChest);
           };
           if (_backpackClass != "") then {

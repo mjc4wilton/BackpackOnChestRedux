@@ -29,7 +29,7 @@ private _mag = {
 } forEach _loadout;
 
 //exit if there is no such item in chestpack
-if !(_mag select 2 isEqualTo true) exitWith {};
+if ((_mag select 2) isNotEqualTo true) exitWith {};
 
 private _var = _unit getVariable [QGVAR(chestpack),nil];
 private _currentMag = (_var select 2) select (_mag select 1);

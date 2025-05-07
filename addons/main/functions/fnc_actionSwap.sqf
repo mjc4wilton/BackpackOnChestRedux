@@ -33,7 +33,7 @@ if ((_backpack isEqualTo "") or ([_unit] call FUNC(chestpack)) isEqualTo "") exi
 //Backpack Variable Handling
 {
     private _val = (backpackContainer _unit) getVariable _x;
-    _backpackVariables pushback [_x, _val];
+    _backpackVariables pushBack [_x, _val];
 } forEach ((allVariables (backpackContainer _unit) - GVAR(VarBlacklist)));
 
 //remove packs

@@ -20,11 +20,11 @@ params ["_unit","_item", ["_quantity", 1]];
 
 private _loadout = _unit call FUNC(chestpackLoadout);
 private _itemFound = {
-    if !(_x find _item isEqualTo -1) exitWith { [_x, _forEachIndex, true] };
+    if (_x find _item isNotEqualTo -1) exitWith { [_x, _forEachIndex, true] };
 } forEach _loadout;
 
 //exit if no item found
-if !(_itemFound select 2 isEqualTo true) exitWith {};
+if ((_itemFound select 2) isNotEqualTo true) exitWith {};
 
 private _var = _unit getVariable [QGVAR(chestpack), nil];
 private _currentItem = (_var select 2) select (_itemFound select 1);
