@@ -25,6 +25,8 @@ private _chestpack = [_unit] call FUNC(chestpack);
 private _chestpackLoadout = [_unit] call FUNC(chestpackLoadout);
 private _chestpackVariables = [_unit] call FUNC(chestpackVariables);
 
+private _shouldSwitchNVGs = currentVisionMode _unit != 0;
+
 //make sure the player has chest-pack and backpack
 if ((_backpack isEqualTo "") or ([_unit] call FUNC(chestpack)) isEqualTo "") exitWith {};
 
@@ -39,9 +41,12 @@ if ((_backpack isEqualTo "") or ([_unit] call FUNC(chestpack)) isEqualTo "") exi
 removeBackpackGlobal _unit;
 
 //add backpack loadout
-private _loadout = getUnitLoadout _unit;
-_loadout set [5, [_chestpack, _chestpackLoadout]];
-_unit setUnitLoadout _loadout;
+private _loadout = [_unit] call CBA_fnc_getLoadout;
+(_loadout select 0) set [5, [_chestpack, _chestpackLoadout]];
+[_unit, _loadout] call CBA_fnc_setLoadout;
+if (_shouldSwitchNVGs) then {
+    _unit action ["NVGoggles", _unit];
+};
 
 //add backpack variables
 private _backpackNew = backpackContainer _unit;
