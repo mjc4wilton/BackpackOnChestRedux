@@ -26,9 +26,14 @@ private _shouldSwitchNVGs = currentVisionMode _unit != 0;
 if ((_chestpack isEqualTo "") or (backpack _unit isNotEqualTo "")) exitWith {};
 
 //add items
-private _loadout = [_unit] call CBA_fnc_getLoadout;
-(_loadout select 0) set [5, [_chestpack, _chestpackLoadout]];
-[_unit, _loadout] call CBA_fnc_setLoadout;
+private _loadout = getUnitLoadout _unit;
+_loadout set [5, [_chestpack, _chestpackLoadout]];
+_unit setUnitLoadout _loadout;
+
+if (GVAR(isACEAXLoaded)) then {
+    [_unit, [_unit] call aceax_gearinfo_fnc_getTextureOptions] call aceax_gearinfo_fnc_setTextureOptions;
+};
+
 if (_shouldSwitchNVGs) then {
     _unit action ["NVGoggles", _unit];
 };

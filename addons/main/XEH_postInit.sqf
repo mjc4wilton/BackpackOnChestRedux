@@ -43,6 +43,8 @@ if (isServer) then {
     }] call CBA_fnc_addEventHandler;
 };
 
+GVAR(isACEAXLoaded) = isClass (configFile >> "CfgPatches" >> "aceax_gearinfo");
+
 // Backpack classnames which will be made invisible instead of being made a chestpack. Useful for items like the vanilla legstrap.
 GVAR(exceptions) = [
     "B_LegStrapBag_black_F",
