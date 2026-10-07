@@ -4,9 +4,7 @@ class CfgVehicles {
         class ArgumentsBaseUnits {
             class Units;
         };
-        class ModuleDescription {
-            class AnyBrain;
-        };
+        class ModuleDescription;
     };
     class GVAR(ModuleAdd): Module_F {
         scope = 2;
