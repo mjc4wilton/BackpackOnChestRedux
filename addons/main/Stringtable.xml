@@ -1,9 +1,6 @@
-<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project name="BOCR">
     <Package name="Main">
-        <Key ID="STR_BOCR_Main_cutLoweringLine">
-            <English>Cut Lowering Line</English>
-        </Key>
         <Key ID="STR_BOCR_Main_Disable">
             <English>Disable BackpackOnChest</English>
             <French>Interdire le sac en position ventral</French>
@@ -109,6 +106,9 @@
             <English>Player is forced to walk when backpack is on chest</English>
             <Russian>Вынуждать игрока ходить когда рюкзак находится на груди</Russian>
             <Turkish>Oyuncu sırt çantası gövdesindeyken yürümeye zorlanır</Turkish>
+        </Key>
+        <Key ID="STR_BOCR_Main_cutLoweringLine">
+            <English>Cut Lowering Line</English>
         </Key>
     </Package>
 </Project>

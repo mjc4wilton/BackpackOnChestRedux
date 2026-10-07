@@ -23,15 +23,6 @@ exclude = [
     "*.sqfc",
 ]
 
-[asc]
-enabled = true
-exclude = [
-    "/initsettings.sqf",
-    "/initkeybinds.sqf",
-    "/xeh_prep.sqf",
-    "dev",
-]
-
 [hemtt.config]
 preset = "Hemtt"
 
