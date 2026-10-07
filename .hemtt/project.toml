@@ -19,8 +19,7 @@ include = [
     "meta.cpp"
 ]
 exclude = [
-    ".vscode",
-    "*.sqfc",
+    ".vscode"
 ]
 
 [hemtt.config]
