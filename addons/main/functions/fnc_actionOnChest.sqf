@@ -19,7 +19,23 @@ params["_unit"];
 
 private _backpack = backpack _unit;
 private _backpackLoad = loadBackpack _unit;
-private _backpackLoadout = ((getUnitLoadout _unit) select 5) select 1;
+private _unitLoadout = getUnitLoadout _unit;
+private _backpackLoadoutRaw = (_unitLoadout select 5) select 1;
+private _acreRadioStates = [];
+private _backpackLoadout = _backpackLoadoutRaw;
+private _backpackContainer = backpackContainer _unit;
+
+if (!isNull _backpackContainer) then {
+    _backpackLoadoutRaw = [_backpackContainer, _backpackLoadoutRaw] call FUNC(normalizeCargoLoadoutCounts);
+    _backpackLoadout = _backpackLoadoutRaw;
+};
+
+// If ACRE is running, capture per-radio state before the backpack (and its contents) are removed.
+// Also convert ACRE radio ID classnames to base classnames for safe restore.
+if ([_unit] call FUNC(acreIsInitialized)) then {
+    _acreRadioStates = [_unit, _backpackLoadoutRaw] call FUNC(acreCaptureRadioStatesFromLoadout);
+    _backpackLoadout = [_backpackLoadoutRaw] call FUNC(acreFilterCargoLoadout);
+};
 private _backpackVariables = [];
 
 //Variable Handling
@@ -29,5 +45,6 @@ private _backpackVariables = [];
 } forEach ((allVariables (backpackContainer _unit) - GVAR(VarBlacklist)));
 
 [_unit, _backpack, _backpackLoadout, _backpackVariables, _backpackLoad] call FUNC(addChestpack);
+_unit setVariable [QGVAR(acreChestpackRadios), _acreRadioStates];
 
 removeBackpackGlobal _unit;

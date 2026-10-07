@@ -6,7 +6,7 @@
         </Key>
         <Key ID="STR_BOCR_Main_Disable">
             <English>Disable BackpackOnChest</English>
-            <French>Interdire le sac en position ventral </French>
+            <French>Interdire le sac en position ventral</French>
             <Spanish>Prohibir BackpackOnChest</Spanish>
             <Russian>Отключить рюкзак на груди</Russian>
             <German>BackpackOnChest verbieten</German>

@@ -31,6 +31,7 @@ An official rewrite and continuation of the original [BackpackOnChest mod by Der
 ### Improvements from the original
 - Optimizations.
 - Support for variables associated with the backpack (for items such as the ACE Gunbag or TFAR backpack radios).
+- Preserves ACRE2 radio settings (channel/volume/ear, etc.) when moving a backpack to/from the chest.
 - Transition to an easier development platform with the support of CBA and ACE macros.
 - Various other improvements.
 

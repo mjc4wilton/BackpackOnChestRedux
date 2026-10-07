@@ -33,3 +33,4 @@ if (GVAR(walk)) then {
 
 //reset variable
 _unit setVariable [QGVAR(chestpack), nil, true];
+_unit setVariable [QGVAR(acreChestpackRadios), nil];

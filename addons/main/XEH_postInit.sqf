@@ -44,6 +44,8 @@ if (isServer) then {
 };
 
 GVAR(isACEAXLoaded) = isClass (configFile >> "CfgPatches" >> "aceax_gearinfo");
+GVAR(isACRELoaded) = isClass (configFile >> "CfgPatches" >> "acre_main")
+    || {isClass (configFile >> "CfgPatches" >> "acre_api")};
 
 // Backpack classnames which will be made invisible instead of being made a chestpack. Useful for items like the vanilla legstrap.
 GVAR(exceptions) = [

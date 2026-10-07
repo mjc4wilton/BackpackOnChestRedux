@@ -20,4 +20,4 @@ params ["_unit"];
 if (GVAR(disabled)) exitWith {false};
 
 vehicle _unit isKindOf "ParachuteBase"
-&& {[_player] call FUNC(chestpack) != ''}
+&& {[_unit] call FUNC(chestpack) != ''}
